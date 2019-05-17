@@ -1,0 +1,23 @@
+﻿using AbstractFactory.Client;
+using DesignPatternBase;
+
+namespace AbstractFactory
+{
+    public class AbstractFactoryExample : IDesignPatternClient
+    {
+        public string Name => "Abstract Factory";
+
+        public void Run()
+        {
+            // Create and run the African animal world
+            IContinentFactory africa = new AfricaFactory();
+            AnimalWorld world = new AnimalWorld(africa);
+            world.RunFoodChain();
+
+            // Create and run the American animal world
+            IContinentFactory america = new AmericaFactory();
+            world = new AnimalWorld(america);
+            world.RunFoodChain();
+        }
+    }
+}
