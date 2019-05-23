@@ -1,6 +1,7 @@
 ﻿using System;
+using AbstractFactory.AbstractProduct;
 
-namespace AbstractFactory
+namespace AbstractFactory.ConcreteProduct
 {
     public class Bison : IHerbivore
     {

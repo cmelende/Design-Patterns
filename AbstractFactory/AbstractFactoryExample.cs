@@ -1,4 +1,6 @@
-﻿using AbstractFactory.Client;
+﻿using AbstractFactory.AbstractFactory;
+using AbstractFactory.Client;
+using AbstractFactory.ConcreteFactory;
 using DesignPatternBase;
 
 namespace AbstractFactory
@@ -7,7 +9,7 @@ namespace AbstractFactory
     {
         public string Name => "Abstract Factory";
 
-        public void Run()
+        public void Main()
         {
             // Create and run the African animal world
             IContinentFactory africa = new AfricaFactory();

@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AbstractFactory;
 using DesignPatternBase;
+using FactoryMethod;
 
 namespace App
 {
     public static class Patterns
     {
-        private static readonly Dictionary<string, IDesignPatternClient> Clients =
-            new Dictionary<string, IDesignPatternClient>
+        private static readonly Dictionary<string, Func<IDesignPatternClient>> Clients =
+            new Dictionary<string, Func<IDesignPatternClient>>
             {
-                {"abstract factory", new AbstractFactoryExample()}
+                {"abstract factory", () => new AbstractFactoryExample()},
+                {"factory method", () => new FactoryMethodExample() }
             };
 
         public static void Run(string patternName)
         {
-            var client = Clients[patternName.ToLower()];
+            var client = Clients[patternName.ToLower()]();
             if (client == null)
             {
                 Console.WriteLine("Invalid Pattern");
@@ -23,7 +26,7 @@ namespace App
             }
 
             Console.WriteLine($"{Filler(10)}{client.Name}{Filler(10)}");
-            client.Run();
+            client.Main();
             Console.WriteLine($"{Filler(client.Name.Length + 20)}\n");
         }
 
@@ -44,7 +47,7 @@ namespace App
             Console.WriteLine($"{Filler(10)}{catalog}{Filler(10)}");
             foreach (var designPatternClient in Clients)
             {
-                Console.WriteLine($"{counter}) {designPatternClient.Value.Name}");
+                Console.WriteLine($"{counter}) {designPatternClient.Value().Name}");
                 counter++;
             }
             Console.WriteLine($"{Filler(20 + catalog.Length)}\n");

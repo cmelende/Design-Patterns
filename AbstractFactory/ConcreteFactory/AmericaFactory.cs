@@ -1,4 +1,8 @@
-﻿namespace AbstractFactory
+﻿using AbstractFactory.AbstractFactory;
+using AbstractFactory.AbstractProduct;
+using AbstractFactory.ConcreteProduct;
+
+namespace AbstractFactory
 {
     public class AmericaFactory : IContinentFactory
 

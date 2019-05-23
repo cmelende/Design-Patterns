@@ -1,4 +1,7 @@
-﻿namespace AbstractFactory.Client
+﻿using AbstractFactory.AbstractFactory;
+using AbstractFactory.AbstractProduct;
+
+namespace AbstractFactory.Client
 {
     public class AnimalWorld
 

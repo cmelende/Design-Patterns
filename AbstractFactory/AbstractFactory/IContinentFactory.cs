@@ -1,4 +1,6 @@
-﻿namespace AbstractFactory
+﻿using AbstractFactory.AbstractProduct;
+
+namespace AbstractFactory.AbstractFactory
 {
     public interface IContinentFactory
     {
