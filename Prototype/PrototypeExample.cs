@@ -10,25 +10,13 @@ namespace Prototype
         public string Name => "Prototype";
         public void Main()
         {
-            var colormanager = new ColorManager();
-
             // Initialize with standard colors
-
-            colormanager["red"] = new Color(255, 0, 0);
-            colormanager["green"] = new Color(0, 255, 0);
-            colormanager["blue"] = new Color(0, 0, 255);
-
-            // User adds personalized colors
-
-            colormanager["angry"] = new Color(255, 54, 0);
-            colormanager["peace"] = new Color(128, 211, 128);
-            colormanager["flame"] = new Color(211, 34, 20);
-
-            // User clones selected colors
-
-            var color1 = colormanager["red"].Clone() as Color;
-            var color2 = colormanager["peace"].Clone() as Color;
-            var color3 = colormanager["flame"].Clone() as Color;
+            var colorManager = new ColorManager
+            {
+                ["red"] = new Color(255, 0, 0),
+                ["green"] = new Color(0, 255, 0),
+                ["blue"] = new Color(0, 0, 255)
+            };
 
             // Ask user for new color 
             Console.WriteLine("Please enter the color you want to create");
@@ -45,9 +33,7 @@ namespace Prototype
             Console.Write("Name:");
             string name = Console.ReadLine();
 
-            colormanager[name] = new Color(inputRed, inputGreen, inputBlue);
-
-            var newColor = colormanager[name].Clone() as Color;
+            colorManager[name] = new Color(inputRed, inputGreen, inputBlue);
 
             Console.WriteLine($"You have created the color: {name} with code rgb({inputRed},{inputBlue},{inputGreen})");
         }
