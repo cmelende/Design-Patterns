@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AbstractFactory;
 using DesignPatternBase;
 using FactoryMethod;
+using Prototype;
 
 namespace App
 {
@@ -12,7 +13,8 @@ namespace App
             new Dictionary<string, Func<IDesignPatternClient>>
             {
                 {"abstract factory", () => new AbstractFactoryExample()},
-                {"factory method", () => new FactoryMethodExample() }
+                {"factory method", () => new FactoryMethodExample() },
+                {"prototype",  ()=> new PrototypeExample()}
             };
 
         public static void Run(string patternName)
