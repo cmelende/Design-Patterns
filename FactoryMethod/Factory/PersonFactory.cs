@@ -1,5 +1,6 @@
 ﻿using System;
 using FactoryMethod.ConcreteProduct;
+using FactoryMethod.Product;
 
 namespace FactoryMethod.Factory
 {

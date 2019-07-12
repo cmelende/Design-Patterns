@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AbstractFactory;
+using Builder;
 using DesignPatternBase;
 using FactoryMethod;
 using Prototype;
@@ -14,7 +15,8 @@ namespace App
             {
                 {"abstract factory", () => new AbstractFactoryExample()},
                 {"factory method", () => new FactoryMethodExample() },
-                {"prototype",  ()=> new PrototypeExample()}
+                {"prototype",  ()=> new PrototypeExample()},
+                {"builder", ()=> new  BuilderExample()}
             };
 
         public static void Run(string patternName)

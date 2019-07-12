@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,9 +7,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj" />
+    <ProjectReference Include="..\Builder\Builder.csproj" />
     <ProjectReference Include="..\DesignPatternBase\DesignPatternBase.csproj" />
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Prototype\Prototype.csproj" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
+
   </ItemGroup>
 
 </Project>

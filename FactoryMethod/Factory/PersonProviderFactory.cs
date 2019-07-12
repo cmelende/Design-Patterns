@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FactoryMethod.ConcreteProduct;
+using FactoryMethod.Product;
 
 namespace FactoryMethod.Factory
 {

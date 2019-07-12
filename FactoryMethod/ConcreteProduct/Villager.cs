@@ -1,4 +1,6 @@
-﻿namespace FactoryMethod.ConcreteProduct
+﻿using FactoryMethod.Product;
+
+namespace FactoryMethod.ConcreteProduct
 {
     public class Villager : IPerson
     {
