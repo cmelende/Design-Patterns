@@ -3,9 +3,6 @@ using System.Collections.Generic;
 
 namespace Builder.Product
 {
-    /// <summary>
-    /// The 'Product' class
-    /// </summary>
     public class Vehicle
     {
         public string Model { get; set; }

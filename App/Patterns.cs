@@ -5,6 +5,7 @@ using Builder;
 using DesignPatternBase;
 using FactoryMethod;
 using Prototype;
+using Singleton;
 
 namespace App
 {
@@ -16,7 +17,8 @@ namespace App
                 {"abstract factory", () => new AbstractFactoryExample()},
                 {"factory method", () => new FactoryMethodExample() },
                 {"prototype",  ()=> new PrototypeExample()},
-                {"builder", ()=> new  BuilderExample()}
+                {"builder", ()=> new  BuilderExample()},
+                {"singleton", ()=> new SingletonExample() }
             };
 
         public static void Run(string patternName)
