@@ -2,26 +2,37 @@
 
 namespace App
 {
-    internal class Program
+    class Program
     {
         private const string ExitKey = "/q";
 
-        private static void Main()
+        static void Main(string [] args)
         {
             Console.WriteLine("----------Design Patterns ----------\n");
             var quitProgram = false;
             while(!quitProgram) 
             {
-                Patterns.List();
+                Patterns.ShowCatalog();
 
                 Console.WriteLine("Enter the design pattern example you wish to run, enter '/q' to quit");
-                var input = Console.ReadLine();
 
-                if (input == ExitKey)
-                    quitProgram = true;
-                else
-                    Patterns.Run(input);
+                var input = Console.ReadLine();
+                quitProgram = input == ExitKey;
+
+                if (!quitProgram) Run(input);
             } 
+        }
+
+        private static void Run(string input)
+        {
+            try
+            {
+                Patterns.Run(input);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
         }
     }
 }

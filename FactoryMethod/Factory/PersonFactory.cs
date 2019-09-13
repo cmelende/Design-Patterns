@@ -18,7 +18,7 @@ namespace FactoryMethod.Factory
                 case PersonType.Urban:
                     return new CityPerson();
                 default:
-                    throw new NotSupportedException();
+                    throw new ArgumentException("Invalid person type");
             }
         }
     }
