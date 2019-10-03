@@ -10,6 +10,8 @@ using DesignPatternBase;
 using FactoryMethod;
 using Prototype;
 using Singleton;
+using CompositePattern.ComponentWithChildManagement;
+using CompositePattern.ComponentWithoutChildManagement;
 
 namespace App
 {
@@ -26,7 +28,9 @@ namespace App
                 {"class adapter pattern", () => new ClassClientAdapter()},
                 {"two way adapter", () => new TwoWayAdapterClient()},
                 {"object adapter", () => new ObjectClientAdapter(new TargetDesignPatternClient())},
-                {"bridge", () => new BridgeExample()}
+                {"bridge", () => new BridgeExample()},
+                {"component with child management", () => new CompositeWithChildManagementClient() },
+                {"component without child management", ()=>new CompositeNoChildManagementClient() }
             };
 
         public static void Run(string patternName)
@@ -40,13 +44,11 @@ namespace App
 
         public static Func<IDesignPatternClient> RetrieveClient(string patternName)
         {
-            var isValidName = Clients.TryGetValue(patternName.ToLower(), out var clientConstructor);
             var isValidIndex = int.TryParse(patternName, out var validIndex);
 
-            if (isValidName) return clientConstructor;
             if (isValidIndex) return Clients.ElementAt(validIndex).Value;
 
-            return null;
+            throw new Exception("Invalid entry, please select a number from the list");
         }
 
 

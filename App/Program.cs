@@ -2,7 +2,7 @@
 
 namespace App
 {
-    class Program
+    internal class Program
     {
         private const string ExitKey = "/q";
 
@@ -14,7 +14,7 @@ namespace App
             {
                 Patterns.ShowCatalog();
 
-                Console.WriteLine("Enter the design pattern example you wish to run, enter '/q' to quit");
+                Console.WriteLine("Enter the number of the design pattern example you wish to run, enter '/q' to quit");
 
                 var input = Console.ReadLine();
                 quitProgram = input == ExitKey;
