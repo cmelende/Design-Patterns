@@ -12,6 +12,8 @@ using Prototype;
 using Singleton;
 using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
+using Decorator.CarExample;
+using Decorator.MarineArenaExample;
 
 namespace App
 {
@@ -30,7 +32,9 @@ namespace App
                 {"object adapter", () => new ObjectClientAdapter(new TargetDesignPatternClient())},
                 {"bridge", () => new BridgeExample()},
                 {"component with child management", () => new CompositeWithChildManagementClient() },
-                {"component without child management", ()=>new CompositeNoChildManagementClient() }
+                {"component without child management", ()=>new CompositeNoChildManagementClient() },
+                {"decorator", () => new DecoratorClient() },
+                {"decorator arena", ()=> new DecoratorArenaClient() }
             };
 
         public static void Run(string patternName)
