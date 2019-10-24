@@ -4,7 +4,7 @@ using DesignPatternBase;
 
 namespace Builder
 {
-    public class BuilderExample : IDesignPatternClient
+    public class BuilderClient : IDesignPatternClient
     {
         public string Name => "Builder";
         public void Main()

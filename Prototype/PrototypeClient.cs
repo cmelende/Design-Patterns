@@ -5,7 +5,7 @@ using Prototype.PrototypeManager;
 
 namespace Prototype
 {
-    public class PrototypeExample : IDesignPatternClient
+    public class PrototypeClient : IDesignPatternClient
     {
         public string Name => "Prototype";
         public void Main()

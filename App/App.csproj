@@ -21,6 +21,7 @@
     <ProjectReference Include="..\DesignPatternBase\DesignPatternBase.csproj" />
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Prototype\Prototype.csproj" />
+    <ProjectReference Include="..\Proxy\Proxy.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
 

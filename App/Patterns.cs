@@ -14,6 +14,10 @@ using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
 using Decorator.CarExample;
 using Decorator.MarineArenaExample;
+using Proxy.CastleProxy.ClassProxy;
+using Proxy.CastleProxy.WithoutTarget;
+using Proxy.CastleProxy.WithTarget;
+using Proxy.SimpleProxy;
 
 namespace App
 {
@@ -22,19 +26,23 @@ namespace App
         private static readonly Dictionary<string, Func<IDesignPatternClient>> Clients =
             new Dictionary<string, Func<IDesignPatternClient>>
             {
-                {"abstract factory", () => new AbstractFactoryExample()},
-                {"factory method", () => new FactoryMethodExample()},
-                {"prototype", () => new PrototypeExample()},
-                {"builder", () => new BuilderExample()},
-                {"singleton", () => new SingletonExample()},
-                {"class adapter pattern", () => new ClassClientAdapter()},
+                {"abstract factory", () => new AbstractFactoryClient()},
+                {"factory method", () => new FactoryMethodClient()},
+                {"prototype", () => new PrototypeClient()},
+                {"builder", () => new BuilderClient()},
+                {"singleton", () => new SingletonClient()},
+                {"class adapter pattern", () => new ClassClientAdapterClient()},
                 {"two way adapter", () => new TwoWayAdapterClient()},
                 {"object adapter", () => new ObjectClientAdapter(new TargetDesignPatternClient())},
-                {"bridge", () => new BridgeExample()},
+                {"bridge", () => new BridgeClient()},
                 {"component with child management", () => new CompositeWithChildManagementClient() },
                 {"component without child management", ()=>new CompositeNoChildManagementClient() },
                 {"decorator", () => new DecoratorClient() },
-                {"decorator arena", ()=> new DecoratorArenaClient() }
+                {"decorator arena", ()=> new DecoratorArenaClient() },
+                {"class proxy", ()=>new ClassProxyClient() },
+                {"simple proxy", ()=>new MathProxyClient() },
+                {"castle proxy without target",  ()=>new CastleProxyInterfaceWithoutTargetClient() },
+                {"castle proxy with target",  ()=>new CastleProxyInterfaceWithTargetClient() }
             };
 
         public static void Run(string patternName)

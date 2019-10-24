@@ -4,7 +4,7 @@ using DesignPatternBase;
 
 namespace Adapter.Adapter
 {
-    public class ClassClientAdapter : TargetDesignPatternClient, IDesignPatternClient
+    public class ClassClientAdapterClient : TargetDesignPatternClient, IDesignPatternClient
     {
         public string Name => GetName();
         public void Main()
@@ -18,7 +18,7 @@ namespace Adapter.Adapter
         public string Name => "Two Way Adapter Client";
         public void Main()
         {
-            var twoWayAdapter = new ClassClientAdapter();
+            var twoWayAdapter = new ClassClientAdapterClient();
 
             Console.WriteLine("As TargetDesignPatternClient");
 

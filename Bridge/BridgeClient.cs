@@ -7,7 +7,7 @@ using DesignPatternBase;
 
 namespace Bridge
 {
-    public class BridgeExample : IDesignPatternClient
+    public class BridgeClient : IDesignPatternClient
     {
         public string Name => "Bridge";
         public void Main()

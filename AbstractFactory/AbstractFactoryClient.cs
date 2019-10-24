@@ -5,7 +5,7 @@ using DesignPatternBase;
 
 namespace AbstractFactory
 {
-    public class AbstractFactoryExample : IDesignPatternClient
+    public class AbstractFactoryClient : IDesignPatternClient
     {
         public string Name => "Abstract Factory";
 

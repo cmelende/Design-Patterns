@@ -5,7 +5,7 @@ using static System.Int32;
 
 namespace FactoryMethod
 {
-    public class FactoryMethodExample : IDesignPatternClient
+    public class FactoryMethodClient : IDesignPatternClient
     {
         public string Name => "PersonFactory Method";
         public void Main()

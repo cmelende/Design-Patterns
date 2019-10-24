@@ -3,7 +3,7 @@ using Singleton.Factory;
 
 namespace Singleton
 {
-    public class SingletonExample : IDesignPatternClient
+    public class SingletonClient : IDesignPatternClient
     {
         public string Name => "Singleton";
         public void Main()
