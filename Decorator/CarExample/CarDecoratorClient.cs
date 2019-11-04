@@ -21,7 +21,7 @@ namespace Decorator.CarExample
             //Wrap EconomyCar instance with AdvancedAccessories instance.   
             objAccessoriesDecorator = new AdvancedAccessories(objAccessoriesDecorator);
 
-            Console.Write("Car Detials: " + objAccessoriesDecorator.GetDescription());
+            Console.Write("Car Details: " + objAccessoriesDecorator.GetDescription());
             Console.WriteLine("\n\n");
             Console.Write("Total Price: " + objAccessoriesDecorator.GetCost());
 
