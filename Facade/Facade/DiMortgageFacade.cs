@@ -1,15 +1,21 @@
 ﻿using System;
 using Facade.Subsystems;
-using Facade.Subsystems.Implementation;
+using Facade.Subsystems.Interface;
 
 namespace Facade.Facade
 {
-    public class MortgageFacade
+    public class DiMortgageFacade
     {
-        private readonly BankBankSubsystem _bankBankSubsystem = new BankBankSubsystem();
-        private readonly CreditSubsystem _creditSubsystem = new CreditSubsystem();
-        private readonly LoanSubsystem _loanSubsystem = new LoanSubsystem();
+        private readonly IBankSubsystem _bankBankSubsystem; 
+        private readonly ICreditSubsystem _creditSubsystem ;
+        private readonly ILoadSubsystem _loanSubsystem ;
 
+        public DiMortgageFacade(IBankSubsystem bankBank, ICreditSubsystem credit, ILoadSubsystem loan)
+        {
+            _bankBankSubsystem = bankBank;
+            _creditSubsystem = credit;
+            _loanSubsystem = loan;
+        }
         public bool IsEligible(Customer customer, int amount)
         {
             Console.WriteLine("{0} applies for {1:C} loan\n",
@@ -25,7 +31,5 @@ namespace Facade.Facade
 
             return eligible;
         }
-
-
     }
 }

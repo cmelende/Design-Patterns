@@ -6,19 +6,19 @@ using Adapter.Adaptees;
 using Adapter.Adapter;
 using Bridge;
 using Builder;
-using DesignPatternBase;
-using FactoryMethod;
-using Prototype;
-using Singleton;
 using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
 using Decorator.CarExample;
 using Decorator.MarineArenaExample;
-using Facade;
+using DesignPatternBase;
+using Facade.Examples;
+using FactoryMethod;
+using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
 using Proxy.CastleProxy.WithTarget;
 using Proxy.SimpleProxy;
+using Singleton;
 
 namespace App
 {
@@ -36,15 +36,16 @@ namespace App
                 {"two way adapter", () => new TwoWayAdapterClient()},
                 {"object adapter", () => new ObjectClientAdapter(new TargetDesignPatternClient())},
                 {"bridge", () => new BridgeClient()},
-                {"component with child management", () => new CompositeWithChildManagementClient() },
-                {"component without child management", ()=>new CompositeNoChildManagementClient() },
-                {"decorator", () => new DecoratorClient() },
-                {"decorator arena", ()=> new DecoratorArenaClient() },
-                {"class proxy", ()=>new ClassProxyClient() },
-                {"simple proxy", ()=>new MathProxyClient() },
-                {"castle proxy without target",  ()=>new CastleProxyInterfaceWithoutTargetClient() },
-                {"castle proxy with target",  ()=>new CastleProxyInterfaceWithTargetClient() },
-                {"facade example", ()=>new FacadeExample() }
+                {"component with child management", () => new CompositeWithChildManagementClient()},
+                {"component without child management", () => new CompositeNoChildManagementClient()},
+                {"decorator", () => new DecoratorClient()},
+                {"decorator arena", () => new DecoratorArenaClient()},
+                {"class proxy", () => new ClassProxyClient()},
+                {"simple proxy", () => new MathProxyClient()},
+                {"castle proxy without target", () => new CastleProxyInterfaceWithoutTargetClient()},
+                {"castle proxy with target", () => new CastleProxyInterfaceWithTargetClient()},
+                {"facade example", () => new FacadeExample()},
+                {"dependency injection facade example", () => new DiFacadeExample()}
             };
 
         public static void Run(string patternName)

@@ -2,7 +2,7 @@
 using DesignPatternBase;
 using Facade.Facade;
 
-namespace Facade
+namespace Facade.Examples
 {
     public class FacadeExample : IDesignPatternClient
     {
