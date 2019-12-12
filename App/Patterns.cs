@@ -14,6 +14,7 @@ using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
 using Decorator.CarExample;
 using Decorator.MarineArenaExample;
+using Facade;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
 using Proxy.CastleProxy.WithTarget;
@@ -42,7 +43,8 @@ namespace App
                 {"class proxy", ()=>new ClassProxyClient() },
                 {"simple proxy", ()=>new MathProxyClient() },
                 {"castle proxy without target",  ()=>new CastleProxyInterfaceWithoutTargetClient() },
-                {"castle proxy with target",  ()=>new CastleProxyInterfaceWithTargetClient() }
+                {"castle proxy with target",  ()=>new CastleProxyInterfaceWithTargetClient() },
+                {"facade example", ()=>new FacadeExample() }
             };
 
         public static void Run(string patternName)
@@ -52,6 +54,9 @@ namespace App
                 .RunInBetween(client.Main);
 
             headerText.Write();
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
 
         public static Func<IDesignPatternClient> RetrieveClient(string patternName)

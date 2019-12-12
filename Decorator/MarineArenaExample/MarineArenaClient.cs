@@ -56,7 +56,6 @@ namespace Decorator.MarineArenaExample
             if (isValidInput) return validIndex;
 
             throw new Exception("Invalid entry, please select a number from the list");
-
         }
 
         public IMarine MarineFactoryMethod(int input)
