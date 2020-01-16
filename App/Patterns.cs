@@ -13,6 +13,7 @@ using Decorator.MarineArenaExample;
 using DesignPatternBase;
 using Facade.Examples;
 using FactoryMethod;
+using Flyweight;
 using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
@@ -45,13 +46,14 @@ namespace App
                 {"castle proxy without target", () => new CastleProxyInterfaceWithoutTargetClient()},
                 {"castle proxy with target", () => new CastleProxyInterfaceWithTargetClient()},
                 {"facade example", () => new FacadeExample()},
-                {"dependency injection facade example", () => new DiFacadeExample()}
+                {"dependency injection facade example", () => new DiFacadeExample()},
+                {"flyweight", ()=> new FlyweightShapeClient() }
             };
 
         public static void Run(string patternName)
         {
-            var client = RetrieveClient(patternName)();
-            var headerText = new HeaderText('-', client.Name)
+            IDesignPatternClient client = RetrieveClient(patternName)();
+            HeaderText headerText = new HeaderText('-', client.Name)
                 .RunInBetween(client.Main);
 
             headerText.Write();
@@ -62,7 +64,7 @@ namespace App
 
         public static Func<IDesignPatternClient> RetrieveClient(string patternName)
         {
-            var isValidIndex = int.TryParse(patternName, out var validIndex);
+            bool isValidIndex = int.TryParse(patternName, out int validIndex);
 
             if (isValidIndex) return Clients.ElementAt(validIndex).Value;
 
@@ -72,7 +74,7 @@ namespace App
 
         public static void ShowCatalog()
         {
-            var headerText = new HeaderText('-', "Catalog")
+            HeaderText headerText = new HeaderText('-', "Catalog")
                 .RunInBetween(PrintEachClient);
             headerText.Write();
         }
