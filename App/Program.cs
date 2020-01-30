@@ -16,7 +16,7 @@ namespace App
 
                 Console.WriteLine("Enter the number of the design pattern example you wish to run, enter '/q' to quit");
 
-                var input = Console.ReadLine();
+                string input = Console.ReadLine();
                 quitProgram = input == ExitKey;
 
                 if (!quitProgram) Run(input);

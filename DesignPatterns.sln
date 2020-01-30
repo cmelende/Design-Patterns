@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{149C46E0-42AE-42FF-A606-D098DBE0ADB6}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "Proxy\Proxy.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csproj", "{62ED9AA9-3C39-4A82-BC57-8A551B7D2964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{440BFBE9-075D-41F4-B9E1-AA18E94606C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyweight.csproj", "{440BFBE9-075D-41F4-B9E1-AA18E94606C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{417E50D0-7EE1-4037-BC07-8D82F758D004}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{440BFBE9-075D-41F4-B9E1-AA18E94606C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{440BFBE9-075D-41F4-B9E1-AA18E94606C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{440BFBE9-075D-41F4-B9E1-AA18E94606C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417E50D0-7EE1-4037-BC07-8D82F758D004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417E50D0-7EE1-4037-BC07-8D82F758D004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417E50D0-7EE1-4037-BC07-8D82F758D004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417E50D0-7EE1-4037-BC07-8D82F758D004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

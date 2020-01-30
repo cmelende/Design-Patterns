@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace App
+﻿namespace App
 {
     public static class StringExtensions
     {

@@ -6,6 +6,7 @@ using Adapter.Adaptees;
 using Adapter.Adapter;
 using Bridge;
 using Builder;
+using ChainOfResponsibility;
 using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
 using Decorator.CarExample;
@@ -47,7 +48,8 @@ namespace App
                 {"castle proxy with target", () => new CastleProxyInterfaceWithTargetClient()},
                 {"facade example", () => new FacadeExample()},
                 {"dependency injection facade example", () => new DiFacadeExample()},
-                {"flyweight", ()=> new FlyweightShapeClient() }
+                {"flyweight", ()=> new FlyweightShapeClient() },
+                {"chain of responsibility", () => new ChainOfResponsibilityClient() }
             };
 
         public static void Run(string patternName)
