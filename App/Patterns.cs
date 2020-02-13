@@ -7,6 +7,7 @@ using Adapter.Adapter;
 using Bridge;
 using Builder;
 using ChainOfResponsibility;
+using Command;
 using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
 using Decorator.CarExample;
@@ -49,7 +50,8 @@ namespace App
                 {"facade example", () => new FacadeExample()},
                 {"dependency injection facade example", () => new DiFacadeExample()},
                 {"flyweight", ()=> new FlyweightShapeClient() },
-                {"chain of responsibility", () => new ChainOfResponsibilityClient() }
+                {"chain of responsibility", () => new ChainOfResponsibilityClient() },
+                {"command", ()=>new CommandClient() }
             };
 
         public static void Run(string patternName)
