@@ -16,6 +16,9 @@ using DesignPatternBase;
 using Facade.Examples;
 using FactoryMethod;
 using Flyweight;
+using Interpreter;
+using Interpreter.DateInterpreter;
+using Interpreter.TruthyExample;
 using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
@@ -51,7 +54,9 @@ namespace App
                 {"dependency injection facade example", () => new DiFacadeExample()},
                 {"flyweight", ()=> new FlyweightShapeClient() },
                 {"chain of responsibility", () => new ChainOfResponsibilityClient() },
-                {"command", ()=>new CommandClient() }
+                {"command", ()=>new CommandClient() },
+                {"date interpreter example", ()=> new DateInterpreterExample() },
+                {"interpreter example", ()=> new TruthyInterpreterExample() }
             };
 
         public static void Run(string patternName)
