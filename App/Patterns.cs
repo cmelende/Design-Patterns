@@ -16,9 +16,9 @@ using DesignPatternBase;
 using Facade.Examples;
 using FactoryMethod;
 using Flyweight;
-using Interpreter;
 using Interpreter.DateInterpreter;
 using Interpreter.TruthyExample;
+using IteratorPattern;
 using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
@@ -56,7 +56,8 @@ namespace App
                 {"chain of responsibility", () => new ChainOfResponsibilityClient() },
                 {"command", ()=>new CommandClient() },
                 {"date interpreter example", ()=> new DateInterpreterExample() },
-                {"interpreter example", ()=> new TruthyInterpreterExample() }
+                {"interpreter example", ()=> new TruthyInterpreterExample() },
+                {"iterator example", ()=> new IteratorDesignPattern() }
             };
 
         public static void Run(string patternName)
