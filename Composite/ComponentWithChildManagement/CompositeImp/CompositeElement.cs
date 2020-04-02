@@ -25,7 +25,7 @@ namespace CompositePattern.ComponentWithChildManagement.CompositeImp
         public override void Display(int indent)
         {
             Console.WriteLine($"{new string('-', indent)} + {Name}");
-            foreach (var d in _elements)
+            foreach (DrawingElement d in _elements)
                 d.Display(indent + 2);
         }
 

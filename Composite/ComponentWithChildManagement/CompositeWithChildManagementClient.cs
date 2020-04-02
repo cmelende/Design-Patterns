@@ -1,5 +1,5 @@
-﻿using Composite.ComponentWithChildManagement.Leaf;
-using CompositePattern.ComponentWithChildManagement.CompositeImp;
+﻿using CompositePattern.ComponentWithChildManagement.CompositeImp;
+using CompositePattern.ComponentWithChildManagement.LeafImp;
 using DesignPatternBase;
 
 namespace CompositePattern.ComponentWithChildManagement

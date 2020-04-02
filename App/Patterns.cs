@@ -19,6 +19,7 @@ using Flyweight;
 using Interpreter.DateInterpreter;
 using Interpreter.TruthyExample;
 using IteratorPattern;
+using Mediator;
 using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
@@ -57,7 +58,8 @@ namespace App
                 {"command", ()=>new CommandClient() },
                 {"date interpreter example", ()=> new DateInterpreterExample() },
                 {"interpreter example", ()=> new TruthyInterpreterExample() },
-                {"iterator example", ()=> new IteratorDesignPattern() }
+                {"iterator example", ()=> new IteratorDesignPattern() },
+                {"mediator example", () => new MediatorExampleClient() }
             };
 
         public static void Run(string patternName)
@@ -92,7 +94,7 @@ namespace App
         private static void PrintEachClient()
         {
             var counter = 0;
-            foreach (var designPatternClient in Clients)
+            foreach (KeyValuePair<string, Func<IDesignPatternClient>> designPatternClient in Clients)
             {
                 Console.WriteLine($"{counter}) {designPatternClient.Value().Name}");
                 counter++;

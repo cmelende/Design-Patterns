@@ -1,7 +1,7 @@
 ﻿using System;
 using CompositePattern.ComponentWithChildManagement.ComponentImp;
 
-namespace Composite.ComponentWithChildManagement.Leaf
+namespace CompositePattern.ComponentWithChildManagement.LeafImp
 {
     public class PrimitiveElement : DrawingElement
 
@@ -20,7 +20,7 @@ namespace Composite.ComponentWithChildManagement.Leaf
 
         public override void Display(int indent)
         {
-            Console.WriteLine(new string('-', indent) + " " + Name);
+            Console.WriteLine($"{new string('-', indent)} {Name}");
         }
     }
 }
