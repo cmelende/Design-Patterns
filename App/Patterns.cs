@@ -20,6 +20,7 @@ using Interpreter.DateInterpreter;
 using Interpreter.TruthyExample;
 using IteratorPattern;
 using Mediator;
+using MementoPattern;
 using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
@@ -59,7 +60,8 @@ namespace App
                 {"date interpreter example", ()=> new DateInterpreterExample() },
                 {"interpreter example", ()=> new TruthyInterpreterExample() },
                 {"iterator example", ()=> new IteratorDesignPattern() },
-                {"mediator example", () => new MediatorExampleClient() }
+                {"mediator example", () => new MediatorExampleClient() },
+                {"memento adventure", ()=>new MementoAdventureExample() }
             };
 
         public static void Run(string patternName)
