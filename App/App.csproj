@@ -12,25 +12,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj" />
-    <ProjectReference Include="..\Adapter\Adapter.csproj" />
-    <ProjectReference Include="..\Bridge\Bridge.csproj" />
-    <ProjectReference Include="..\Builder\Builder.csproj" />
-    <ProjectReference Include="..\ChainOfResponsibility\ChainOfResponsibility.csproj" />
-    <ProjectReference Include="..\Command\Command.csproj" />
+    <ProjectReference Include="..\AbstractFactory\AbstractFactoryPattern.csproj" />
+    <ProjectReference Include="..\Adapter\AdapterPattern.csproj" />
+    <ProjectReference Include="..\Bridge\BridgePattern.csproj" />
+    <ProjectReference Include="..\Builder\BuilderPattern.csproj" />
+    <ProjectReference Include="..\ChainOfResponsibility\ChainOfResponsibilityPattern.csproj" />
+    <ProjectReference Include="..\Command\CommandPattern.csproj" />
     <ProjectReference Include="..\Composite\CompositePattern.csproj" />
-    <ProjectReference Include="..\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\Decorator\DecoratorPattern.csproj" />
     <ProjectReference Include="..\DesignPatternBase\DesignPatternBase.csproj" />
-    <ProjectReference Include="..\Facade\Facade.csproj" />
-    <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
-    <ProjectReference Include="..\Flyweight\Flyweight.csproj" />
-    <ProjectReference Include="..\Interpreter\Interpreter.csproj" />
+    <ProjectReference Include="..\Facade\FacadePattern.csproj" />
+    <ProjectReference Include="..\FactoryMethod\FactoryMethodPattern.csproj" />
+    <ProjectReference Include="..\Flyweight\FlyweightPattern.csproj" />
+    <ProjectReference Include="..\Interpreter\InterpreterPattern.csproj" />
     <ProjectReference Include="..\Iterator\IteratorPattern.csproj" />
-    <ProjectReference Include="..\Mediator\Mediator.csproj" />
+    <ProjectReference Include="..\Mediator\MediatorPattern.csproj" />
     <ProjectReference Include="..\Memento\MementoPattern.csproj" />
-    <ProjectReference Include="..\Prototype\Prototype.csproj" />
-    <ProjectReference Include="..\Proxy\Proxy.csproj" />
-    <ProjectReference Include="..\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\Prototype\PrototypePattern.csproj" />
+    <ProjectReference Include="..\Proxy\ProxyPattern.csproj" />
+    <ProjectReference Include="..\Singleton\SingletonPattern.csproj" />
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
 
   </ItemGroup>
