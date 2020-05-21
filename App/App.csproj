@@ -28,6 +28,7 @@
     <ProjectReference Include="..\Iterator\IteratorPattern.csproj" />
     <ProjectReference Include="..\Mediator\MediatorPattern.csproj" />
     <ProjectReference Include="..\Memento\MementoPattern.csproj" />
+    <ProjectReference Include="..\OberserverPattern\ObserverPattern.csproj" />
     <ProjectReference Include="..\Prototype\PrototypePattern.csproj" />
     <ProjectReference Include="..\Proxy\ProxyPattern.csproj" />
     <ProjectReference Include="..\Singleton\SingletonPattern.csproj" />

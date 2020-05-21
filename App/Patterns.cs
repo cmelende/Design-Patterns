@@ -21,6 +21,7 @@ using Interpreter.TruthyExample;
 using IteratorPattern;
 using Mediator;
 using MementoPattern;
+using ObserverPattern;
 using Prototype;
 using Proxy.CastleProxy.ClassProxy;
 using Proxy.CastleProxy.WithoutTarget;
@@ -61,7 +62,8 @@ namespace App
                 {"interpreter example", ()=> new TruthyInterpreterExample() },
                 {"iterator example", ()=> new IteratorDesignPattern() },
                 {"mediator example", () => new MediatorExampleClient() },
-                {"memento adventure", ()=>new MementoAdventureExample() }
+                {"memento adventure", ()=>new MementoAdventureExample() },
+                {"observer example", ()=>new ObserverClient() }
             };
 
         public static void Run(string patternName)
