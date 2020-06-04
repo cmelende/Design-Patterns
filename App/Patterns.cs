@@ -28,6 +28,7 @@ using Proxy.CastleProxy.WithoutTarget;
 using Proxy.CastleProxy.WithTarget;
 using Proxy.SimpleProxy;
 using Singleton;
+using StatePattern;
 
 namespace App
 {
@@ -63,7 +64,8 @@ namespace App
                 {"iterator example", ()=> new IteratorDesignPattern() },
                 {"mediator example", () => new MediatorExampleClient() },
                 {"memento adventure", ()=>new MementoAdventureExample() },
-                {"observer example", ()=>new ObserverClient() }
+                {"observer example", ()=>new ObserverClient() },
+                {"state example", ()=>new StatePatternClient() }
             };
 
         public static void Run(string patternName)

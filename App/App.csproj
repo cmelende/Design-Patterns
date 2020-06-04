@@ -32,6 +32,7 @@
     <ProjectReference Include="..\Prototype\PrototypePattern.csproj" />
     <ProjectReference Include="..\Proxy\ProxyPattern.csproj" />
     <ProjectReference Include="..\Singleton\SingletonPattern.csproj" />
+    <ProjectReference Include="..\StatePattern\StatePattern.csproj" />
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
 
   </ItemGroup>
