@@ -29,6 +29,8 @@ using Proxy.CastleProxy.WithTarget;
 using Proxy.SimpleProxy;
 using Singleton;
 using StatePattern;
+using Strategy.SimpleValidationStrategyEx;
+using Strategy.ValidationStrategyEx;
 
 namespace App
 {
@@ -65,7 +67,9 @@ namespace App
                 {"mediator example", () => new MediatorExampleClient() },
                 {"memento adventure", ()=>new MementoAdventureExample() },
                 {"observer example", ()=>new ObserverClient() },
-                {"state example", ()=>new StatePatternClient() }
+                {"state example", ()=>new StatePatternClient() },
+                {"simple stratege", ()=>new SimpleStrategyClient() },
+                {"validation strategy", ()=>new ValidationStrategyClient() }
             };
 
         public static void Run(string patternName)

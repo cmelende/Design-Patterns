@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MementoPattern", "Memento\M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverPattern", "OberserverPattern\ObserverPattern.csproj", "{92225365-5A35-4263-B570-14281B2B8041}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "StatePattern\StatePattern.csproj", "{8882146D-39CC-4BC4-86E6-673AD8B42038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatePattern", "StatePattern\StatePattern.csproj", "{8882146D-39CC-4BC4-86E6-673AD8B42038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{8882146D-39CC-4BC4-86E6-673AD8B42038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8882146D-39CC-4BC4-86E6-673AD8B42038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8882146D-39CC-4BC4-86E6-673AD8B42038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
