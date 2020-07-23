@@ -31,6 +31,7 @@ using Singleton;
 using StatePattern;
 using Strategy.SimpleValidationStrategyEx;
 using Strategy.ValidationStrategyEx;
+using TemplateMethodPattern;
 
 namespace App
 {
@@ -69,7 +70,8 @@ namespace App
                 {"observer example", ()=>new ObserverClient() },
                 {"state example", ()=>new StatePatternClient() },
                 {"simple stratege", ()=>new SimpleStrategyClient() },
-                {"validation strategy", ()=>new ValidationStrategyClient() }
+                {"validation strategy", ()=>new ValidationStrategyClient() },
+                {"template method example", () => new TemplateMethodExample()}
             };
 
         public static void Run(string patternName)

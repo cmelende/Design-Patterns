@@ -55,6 +55,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatePattern", "StatePatter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethodPattern", "TemplateMethodPattern\TemplateMethodPattern.csproj", "{1F8E2FFE-4D31-423B-8CF1-8B7FD7354426}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFB1C963-6C4F-443E-8DDD-8E076188E8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8E2FFE-4D31-423B-8CF1-8B7FD7354426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8E2FFE-4D31-423B-8CF1-8B7FD7354426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8E2FFE-4D31-423B-8CF1-8B7FD7354426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8E2FFE-4D31-423B-8CF1-8B7FD7354426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using DesignPatternBase;
 using IteratorPattern.ConcreteAggregate;
-using IteratorPattern.ConcreteIterator;
 
 namespace IteratorPattern
 {
@@ -88,7 +87,6 @@ namespace IteratorPattern
         private int _position = -1;
 
         private bool _reverse;
-        private object _current;
 
         public Enum(Collection collection, bool reverse = false)
         {
@@ -131,5 +129,4 @@ namespace IteratorPattern
 
         object IEnumerator.Current => Current();
     }
-
 }
