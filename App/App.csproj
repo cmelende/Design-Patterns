@@ -36,6 +36,7 @@
     <ProjectReference Include="..\Strategy\Strategy.csproj" />
     <PackageReference Include="System.Reflection.Emit" Version="4.3.0" />
     <ProjectReference Include="..\TemplateMethodPattern\TemplateMethodPattern.csproj" />
+    <ProjectReference Include="..\VisitorPattern\VisitorPattern.csproj" />
 
   </ItemGroup>
 

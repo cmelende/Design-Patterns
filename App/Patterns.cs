@@ -32,6 +32,7 @@ using StatePattern;
 using Strategy.SimpleValidationStrategyEx;
 using Strategy.ValidationStrategyEx;
 using TemplateMethodPattern;
+using VisitorPattern;
 
 namespace App
 {
@@ -71,7 +72,8 @@ namespace App
                 {"state example", ()=>new StatePatternClient() },
                 {"simple stratege", ()=>new SimpleStrategyClient() },
                 {"validation strategy", ()=>new ValidationStrategyClient() },
-                {"template method example", () => new TemplateMethodExample()}
+                {"template method example", () => new TemplateMethodExample()},
+                {"visitor example", ()=>new VisitorExample()}
             };
 
         public static void Run(string patternName)
