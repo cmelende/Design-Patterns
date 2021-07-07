@@ -8,8 +8,6 @@ namespace Command.ConcreteCommand
         private readonly Account _account;
         private readonly decimal _amount;
 
-        public bool IsCompleted { get; set; }
-
         public Deposit(Account account, decimal amount)
         {
             _account = account;
@@ -17,6 +15,8 @@ namespace Command.ConcreteCommand
 
             IsCompleted = false;
         }
+
+        public bool IsCompleted { get; set; }
 
         public void Execute()
         {

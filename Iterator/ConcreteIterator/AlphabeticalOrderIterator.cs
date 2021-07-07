@@ -5,24 +5,21 @@ namespace IteratorPattern.ConcreteIterator
 {
     public class AlphabeticalOrderIterator : Iterator
     {
-        private WordsCollection _collection;
+        private readonly WordsCollection _collection;
 
         // Stores the current traversal position. An iterator may have a lot of
         // other fields for storing iteration state, especially when it is
         // supposed to work with a particular kind of collection.
         private int _position = -1;
 
-        private bool _reverse;
+        private readonly bool _reverse;
 
         public AlphabeticalOrderIterator(WordsCollection collection, bool reverse = false)
         {
             _collection = collection;
             _reverse = reverse;
 
-            if (reverse)
-            {
-                _position = collection.GetItems().Count;
-            }
+            if (reverse) _position = collection.GetItems().Count;
         }
 
         public override object Current()

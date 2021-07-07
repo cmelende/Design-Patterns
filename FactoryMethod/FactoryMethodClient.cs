@@ -1,20 +1,22 @@
 ﻿using System;
 using DesignPatternBase;
-using FactoryMethod.Factory;
+using FactoryMethodPattern.Factory;
+using FactoryMethodPattern.Product;
 using static System.Int32;
 
-namespace FactoryMethod
+namespace FactoryMethodPattern
 {
     public class FactoryMethodClient : IDesignPatternClient
     {
         public string Name => "PersonFactory Method";
+
         public void Main()
         {
             Console.WriteLine("Please enter the type of person you wish to create\n" +
-                              $"Enter {(int)PersonType.Rural} for {PersonType.Rural.ToString()} and " +
-                              $"{(int)PersonType.Urban} for {PersonType.Urban.ToString()}");
+                              $"Enter {(int) PersonType.Rural} for {PersonType.Rural.ToString()} and " +
+                              $"{(int) PersonType.Urban} for {PersonType.Urban.ToString()}");
 
-            var validInput = TryParse(Console.ReadLine(), out var input);
+            bool validInput = TryParse(Console.ReadLine(), out int input);
 
             if (!validInput)
             {
@@ -22,10 +24,10 @@ namespace FactoryMethod
                 return;
             }
 
-            var personInput = (PersonType) (input);
+            var personInput = (PersonType) input;
 
             var factory = new PersonFactory();
-            var person = factory.GetPerson(personInput);
+            IPerson person = factory.GetPerson(personInput);
 
             Console.WriteLine($"Name: {person.GetName()}");
         }

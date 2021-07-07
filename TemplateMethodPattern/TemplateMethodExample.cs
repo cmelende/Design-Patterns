@@ -6,6 +6,7 @@ namespace TemplateMethodPattern
     public class TemplateMethodExample : IDesignPatternClient
     {
         public string Name => "Template method example";
+
         public void Main()
         {
             var bread = new Bread();

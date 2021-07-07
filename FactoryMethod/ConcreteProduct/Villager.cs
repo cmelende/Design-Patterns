@@ -1,6 +1,6 @@
-﻿using FactoryMethod.Product;
+﻿using FactoryMethodPattern.Product;
 
-namespace FactoryMethod.ConcreteProduct
+namespace FactoryMethodPattern.ConcreteProduct
 {
     public class Villager : IPerson
     {

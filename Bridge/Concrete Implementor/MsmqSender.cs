@@ -1,7 +1,7 @@
 ﻿using System;
-using Bridge.Implementor;
+using BridgePattern.Implementor;
 
-namespace Bridge.Concrete_Implementor
+namespace BridgePattern.Concrete_Implementor
 {
     public class MsmqSender : IMessageSender
     {

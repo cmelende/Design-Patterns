@@ -1,19 +1,20 @@
-﻿using Decorator.CarExample.Component;
-using Decorator.CarExample.Decorator;
+﻿using DecoratorPattern.CarExample.Component;
+using DecoratorPattern.CarExample.Decorator;
 
-namespace Decorator.CarExample.ConcreteDecorator
+namespace DecoratorPattern.CarExample.ConcreteDecorator
 {
-    /// <summary>   
-    /// Concrete Decorator   
-    /// </summary>   
+    /// <summary>
+    ///     Concrete Decorator
+    /// </summary>
     public class BasicAccessories : CarAccessoriesDecorator
     {
-        public BasicAccessories(ICar aCar) : base(aCar) { }
+        public BasicAccessories(ICar aCar) : base(aCar)
+        {
+        }
 
         public override string GetDescription()
         {
             return base.GetDescription() + ",Basic Accessories Package";
-
         }
 
         public override double GetCost()

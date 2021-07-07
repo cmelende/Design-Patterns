@@ -1,4 +1,4 @@
-﻿namespace Singleton.Interface
+﻿namespace SingletonPattern.Interface
 {
     public interface ILogger
     {

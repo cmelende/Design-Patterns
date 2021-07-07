@@ -1,8 +1,7 @@
 ﻿using System;
-using Facade.Subsystems;
-using Facade.Subsystems.Implementation;
+using FacadePattern.Subsystems.Implementation;
 
-namespace Facade.Facade
+namespace FacadePattern.Facade
 {
     public class MortgageFacade
     {
@@ -25,7 +24,5 @@ namespace Facade.Facade
 
             return eligible;
         }
-
-
     }
 }

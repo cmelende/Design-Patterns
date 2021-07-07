@@ -1,17 +1,20 @@
 ﻿using System;
-using Builder.Director;
+using BuilderPattern.ConcreteBuilder;
+using BuilderPattern.Director;
+using BuilderPattern.Product;
 using DesignPatternBase;
 
-namespace Builder
+namespace BuilderPattern
 {
     public class BuilderClient : IDesignPatternClient
     {
         public string Name => "Builder";
+
         public void Main()
         {
             var vehicleCreator = new VehicleCreator(new HeroBuilder());
             vehicleCreator.CreateVehicle();
-            var vehicle = vehicleCreator.GetVehicle();
+            Vehicle vehicle = vehicleCreator.GetVehicle();
             vehicle.ShowInfo();
 
             Console.WriteLine("---------------------------------------------");
@@ -20,8 +23,6 @@ namespace Builder
             vehicleCreator.CreateVehicle();
             vehicle = vehicleCreator.GetVehicle();
             vehicle.ShowInfo();
-
-            Console.ReadKey();
         }
     }
 }

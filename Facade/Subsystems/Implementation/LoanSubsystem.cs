@@ -1,7 +1,7 @@
 ﻿using System;
-using Facade.Subsystems.Interface;
+using FacadePattern.Subsystems.Interface;
 
-namespace Facade.Subsystems.Implementation
+namespace FacadePattern.Subsystems.Implementation
 {
     public class LoanSubsystem : ILoadSubsystem
     {

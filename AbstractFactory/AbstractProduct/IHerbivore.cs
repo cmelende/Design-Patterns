@@ -1,4 +1,4 @@
-﻿namespace AbstractFactory.AbstractProduct
+﻿namespace AbstractFactoryPattern.AbstractProduct
 {
     public interface IHerbivore
     {

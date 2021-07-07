@@ -1,11 +1,12 @@
 ﻿using System;
-using Singleton.Interface;
+using SingletonPattern.Interface;
 
-namespace Singleton.Implementation
+namespace SingletonPattern.Implementation
 {
     public class DebugLogger : ILogger
     {
         private static readonly DebugLogger instance = new DebugLogger();
+
         static DebugLogger()
         {
         }

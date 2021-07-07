@@ -1,11 +1,12 @@
 ﻿using System;
-using Singleton.Interface;
+using SingletonPattern.Interface;
 
-namespace Singleton.Implementation
+namespace SingletonPattern.Implementation
 {
     public class ProductionLogger : ILogger
     {
         private static readonly ProductionLogger instance = new ProductionLogger();
+
         static ProductionLogger()
         {
         }

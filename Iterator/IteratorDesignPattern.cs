@@ -10,6 +10,18 @@ namespace IteratorPattern
     {
         public string Name => "Iterator example";
 
+        public void Main()
+        {
+            var collection = new Collection();
+            collection.Add(1);
+            collection.Add(2);
+            collection.Add(3);
+
+            Console.WriteLine("Straight traversal:");
+
+            foreach (object element in collection) Console.WriteLine(element);
+        }
+
         public void Main2()
         {
             // The client code may or may not know about the Concrete Iterator
@@ -22,40 +34,19 @@ namespace IteratorPattern
 
             Console.WriteLine("Straight traversal:");
 
-            foreach (object element in collection)
-            {
-                Console.WriteLine(element);
-            }
+            foreach (object element in collection) Console.WriteLine(element);
 
             Console.WriteLine("\nReverse traversal:");
 
             collection.ReverseDirection();
 
-            foreach (object element in collection)
-            {
-                Console.WriteLine(element);
-            }
-        }
-
-        public void Main()
-        {
-            var collection = new Collection();
-            collection.Add(1);
-            collection.Add(2);
-            collection.Add(3);
-
-            Console.WriteLine("Straight traversal:");
-
-            foreach (object element in collection)
-            {
-                Console.WriteLine(element);
-            }
+            foreach (object element in collection) Console.WriteLine(element);
         }
     }
 
     public class Collection
     {
-        private IList<int> Numbers;
+        private readonly IList<int> Numbers;
 
         public Collection()
         {
@@ -77,39 +68,27 @@ namespace IteratorPattern
             Numbers.Add(n);
         }
     }
+
     public class Enum : IEnumerator
     {
-        private Collection _collection;
+        private readonly Collection _collection;
 
         // Stores the current traversal position. An iterator may have a lot of
         // other fields for storing iteration state, especially when it is
         // supposed to work with a particular kind of collection.
         private int _position = -1;
 
-        private bool _reverse;
+        private readonly bool _reverse;
 
         public Enum(Collection collection, bool reverse = false)
         {
             _collection = collection;
             _reverse = reverse;
 
-            if (reverse)
-            {
-                _position = collection.GetItems().Count;
-            }
+            if (reverse) _position = collection.GetItems().Count;
         }
 
-        public  object Current()
-        {
-            return _collection.GetItems()[_position];
-        }
-
-        public  int Key()
-        {
-            return _position;
-        }
-
-        public  bool MoveNext()
+        public bool MoveNext()
         {
             int updatedPosition = _position + (_reverse ? -1 : 1);
 
@@ -122,11 +101,21 @@ namespace IteratorPattern
             return false;
         }
 
-        public  void Reset()
+        public void Reset()
         {
             _position = _reverse ? _collection.GetItems().Count - 1 : 0;
         }
 
         object IEnumerator.Current => Current();
+
+        public object Current()
+        {
+            return _collection.GetItems()[_position];
+        }
+
+        public int Key()
+        {
+            return _position;
+        }
     }
 }

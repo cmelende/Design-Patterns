@@ -6,8 +6,9 @@ namespace App
     {
         private readonly char _fillerChar;
         private readonly string _text;
-        private int _fillerAmount = 10;
         private Action _action;
+        private readonly int _fillerAmount = 10;
+
         public HeaderText(char fillerChar, string text)
         {
             _fillerChar = fillerChar;

@@ -1,6 +1,6 @@
-﻿using Bridge.Abstraction;
+﻿using BridgePattern.Abstraction;
 
-namespace Bridge.Refined_Abstraction
+namespace BridgePattern.Refined_Abstraction
 {
     public class UserMessage : Message
     {

@@ -1,25 +1,29 @@
 ﻿using System;
+using Decorator;
 using Decorator.MarineArenaExample.Component;
 using Decorator.MarineArenaExample.ConcreteComponent;
-using Decorator.MarineArenaExample.ConcreteDecorator;
+using DecoratorPattern.MarineArenaExample.ConcreteComponent;
+using DecoratorPattern.MarineArenaExample.ConcreteDecorator;
+using DecoratorPattern.MarineArenaExample.Decorator;
 using DesignPatternBase;
 
-namespace Decorator.MarineArenaExample
+namespace DecoratorPattern.MarineArenaExample
 {
     public class DecoratorArenaClient : IDesignPatternClient
     {
         public string Name => "Decorator Arena Example";
+
         public void Main()
         {
-            var marineWithEquipment = PromptBuildMarine();
+            MarineDecorator marineWithEquipment = PromptBuildMarine();
             marineWithEquipment.PrintStats();
         }
 
         private MarineDecorator PromptBuildMarine()
         {
-            var marineType = PromptMarineType();
-            var marine = MarineFactoryMethod(marineType);
-            var marineWithEquipment = PromptChooseEquipment(marine);
+            int marineType = PromptMarineType();
+            IMarine marine = MarineFactoryMethod(marineType);
+            MarineDecorator marineWithEquipment = PromptChooseEquipment(marine);
 
             return marineWithEquipment;
         }
@@ -30,14 +34,13 @@ namespace Decorator.MarineArenaExample
             var doneEquipping = false;
             do
             {
-                var decoratorChoice = PromptMarineDecorator();
+                int decoratorChoice = PromptMarineDecorator();
                 marineWithEquipment = ApplyDecorator(decoratorChoice, marine);
 
                 Console.WriteLine("Done choosing equipment?");
-                var isDoneInput = Console.ReadLine()?.ToLower();
+                string isDoneInput = Console.ReadLine()?.ToLower();
 
                 if (isDoneInput == "y" || isDoneInput == "yes") doneEquipping = true;
-
             } while (!doneEquipping);
 
             return marineWithEquipment;
@@ -50,9 +53,9 @@ namespace Decorator.MarineArenaExample
             Console.WriteLine("Sargent: 2");
             Console.WriteLine("Captain: 3");
             Console.WriteLine("General: 4");
-            var input = Console.ReadLine();
+            string input = Console.ReadLine();
 
-            var isValidInput = int.TryParse(input, out var validIndex);
+            bool isValidInput = int.TryParse(input, out int validIndex);
             if (isValidInput) return validIndex;
 
             throw new Exception("Invalid entry, please select a number from the list");
@@ -84,9 +87,9 @@ namespace Decorator.MarineArenaExample
             Console.WriteLine("Advanced Armor: 4");
             Console.WriteLine("Elite Loadout: 5");
             Console.WriteLine("Elite Armor: 6");
-            var input = Console.ReadLine();
+            string input = Console.ReadLine();
 
-            var isValidInput = int.TryParse(input, out var validIndex);
+            bool isValidInput = int.TryParse(input, out int validIndex);
             if (isValidInput) return validIndex;
 
             throw new Exception("Invalid entry, please select a number from the list");

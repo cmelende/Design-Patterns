@@ -6,7 +6,7 @@
         {
             Name = name;
             Gold = gold;
-            Level= level;
+            Level = level;
         }
 
         public string Name { get; set; }

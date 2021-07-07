@@ -1,15 +1,16 @@
 ﻿using System;
-using Bridge.Abstraction;
-using Bridge.Concrete_Implementor;
-using Bridge.Implementor;
-using Bridge.Refined_Abstraction;
+using BridgePattern.Abstraction;
+using BridgePattern.Concrete_Implementor;
+using BridgePattern.Implementor;
+using BridgePattern.Refined_Abstraction;
 using DesignPatternBase;
 
-namespace Bridge
+namespace BridgePattern
 {
     public class BridgeClient : IDesignPatternClient
     {
         public string Name => "Bridge";
+
         public void Main()
         {
             IMessageSender email = new EmailSender();

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using DesignPatternBase;
-using Interpreter.DateInterpreter.AbstractExpression;
-using Interpreter.DateInterpreter.NonterminalExpression;
+using InterpreterPattern.DateInterpreter.AbstractExpression;
+using InterpreterPattern.DateInterpreter.NonterminalExpression;
 
-namespace Interpreter.DateInterpreter
+namespace InterpreterPattern.DateInterpreter
 {
     public class DateInterpreterExample : IDesignPatternClient
     {
@@ -16,27 +16,15 @@ namespace Interpreter.DateInterpreter
             var context = new Context.Context(DateTime.Now);
             Console.WriteLine("Please select the Expression  : MM DD YYYY or YYYY MM DD or DD MM YYYY ");
             context.Expression = Console.ReadLine();
-            var strArray = context.Expression?.Split(' ') ?? new string[]{};
+            string[] strArray = context.Expression?.Split(' ') ?? new string[] { };
             foreach (string item in strArray)
-            {
                 if (item == "DD")
-                {
                     objExpressions.Add(new DayExpression());
-                }
                 else if (item == "MM")
-                {
                     objExpressions.Add(new MonthExpression());
-                }
-                else if (item == "YYYY")
-                {
-                    objExpressions.Add(new YearExpression());
-                }
-            }
+                else if (item == "YYYY") objExpressions.Add(new YearExpression());
             objExpressions.Add(new SeparatorExpression());
-            foreach (IAbstractExpression obj in objExpressions)
-            {
-                obj.Evaluate(context);
-            }
+            foreach (IAbstractExpression obj in objExpressions) obj.Evaluate(context);
             Console.WriteLine(context.Expression);
             Console.Read();
         }

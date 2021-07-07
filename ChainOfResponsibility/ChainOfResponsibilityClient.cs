@@ -1,6 +1,6 @@
-﻿using ChainOfResponsibility.ConcreteHandler;
-using ChainOfResponsibility.Details;
+﻿using ChainOfResponsibility.Details;
 using ChainOfResponsibility.Handler;
+using ChainOfResponsibilityPattern.ConcreteHandler;
 using DesignPatternBase;
 
 namespace ChainOfResponsibility

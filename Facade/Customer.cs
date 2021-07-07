@@ -1,4 +1,4 @@
-﻿namespace Facade
+﻿namespace FacadePattern
 {
     public class Customer
     {

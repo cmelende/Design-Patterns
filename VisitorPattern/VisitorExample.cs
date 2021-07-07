@@ -12,16 +12,14 @@ namespace VisitorPattern
     {
         public static void ClientCode(IEnumerable<IComponent> components, IVisitor visitor)
         {
-            foreach (IComponent component in components)
-            {
-                component.Accept(visitor);
-            }
+            foreach (IComponent component in components) component.Accept(visitor);
         }
     }
 
     public class VisitorExample : IDesignPatternClient
     {
         public string Name => "VisitorPattern Example";
+
         public void Main()
         {
             var components = new List<IComponent>
@@ -32,7 +30,7 @@ namespace VisitorPattern
 
             Console.WriteLine("The client code works with all visitors via the base VisitorPattern interface:");
             var visitor1 = new XmlExportVisitor();
-            Client.ClientCode(components,visitor1);
+            Client.ClientCode(components, visitor1);
 
             Console.WriteLine();
 

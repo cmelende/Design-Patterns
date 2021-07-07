@@ -1,6 +1,6 @@
-﻿using Interpreter.DateInterpreter.AbstractExpression;
+﻿using InterpreterPattern.DateInterpreter.AbstractExpression;
 
-namespace Interpreter.DateInterpreter.NonterminalExpression
+namespace InterpreterPattern.DateInterpreter.NonterminalExpression
 {
     public class MonthExpression : IAbstractExpression
     {

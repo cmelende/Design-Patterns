@@ -1,6 +1,6 @@
-﻿using Interpreter.TruthyExample.AbstractExpression;
+﻿using InterpreterPattern.TruthyExample.AbstractExpression;
 
-namespace Interpreter.TruthyExample.NonterminalExpression
+namespace InterpreterPattern.TruthyExample.NonterminalExpression
 {
     public class AndExpression : IExpression
     {

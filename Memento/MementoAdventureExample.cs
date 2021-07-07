@@ -11,12 +11,11 @@ namespace MementoPattern
 
         public void Main()
         {
-
             var character = new VideoGameCharacter
             {
                 Name = "Trogdor",
                 Gold = 100,
-                Level= 10
+                Level = 10
             };
             character.PrintStats();
 

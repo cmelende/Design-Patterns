@@ -15,7 +15,6 @@ namespace Strategy.ValidationStrategyEx.Context
         public Validation Validate(object obj, Validation verification)
         {
             return _validation.Validate(obj, verification);
-
         }
 
         public void SetValidation(IValidationStrategy validation)

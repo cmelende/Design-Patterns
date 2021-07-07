@@ -21,10 +21,7 @@ namespace Command.Invoker
         public void ProcessPendingTransactions()
         {
             // Apply transactions in the order they were added.
-            foreach (ITransaction transaction in _transactions.Where(x => !x.IsCompleted))
-            {
-                transaction.Execute();
-            }
+            foreach (ITransaction transaction in _transactions.Where(x => !x.IsCompleted)) transaction.Execute();
         }
     }
 }

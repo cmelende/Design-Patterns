@@ -1,7 +1,7 @@
 ﻿using System;
-using Flyweight.Flyweight;
+using FlyweightPattern.Flyweight;
 
-namespace Flyweight.ConcreteFlyweight
+namespace FlyweightPattern.ConcreteFlyweight
 {
     /// <summary>
     ///     A 'ConcreteFlyweight' class

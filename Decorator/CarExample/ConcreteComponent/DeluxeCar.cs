@@ -1,10 +1,10 @@
-﻿using Decorator.CarExample.Component;
+﻿using DecoratorPattern.CarExample.Component;
 
-namespace Decorator.CarExample.ConcreteComponent
+namespace DecoratorPattern.CarExample.ConcreteComponent
 {
-    /// <summary>   
-    /// Concrete Car   
-    /// </summary>   
+    /// <summary>
+    ///     Concrete Car
+    /// </summary>
     public class DeluxeCar : ICar
     {
         public string GetDescription()

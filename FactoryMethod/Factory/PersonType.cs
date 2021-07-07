@@ -1,4 +1,4 @@
-﻿namespace FactoryMethod.Factory
+﻿namespace FactoryMethodPattern.Factory
 {
     public enum PersonType
     {

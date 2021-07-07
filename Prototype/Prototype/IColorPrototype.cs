@@ -1,4 +1,4 @@
-﻿namespace Prototype.Prototype
+﻿namespace PrototypePattern.Prototype
 {
     public interface IColorPrototype
     {

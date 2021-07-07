@@ -9,8 +9,6 @@ namespace Command.ConcreteCommand
         private readonly Account _fromAccount;
         private readonly Account _toAccount;
 
-        public bool IsCompleted { get; set; }
-
         public Transfer(Account fromAccount, Account toAccount, decimal amount)
         {
             _fromAccount = fromAccount;
@@ -19,6 +17,8 @@ namespace Command.ConcreteCommand
 
             IsCompleted = false;
         }
+
+        public bool IsCompleted { get; set; }
 
         public void Execute()
         {

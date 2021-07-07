@@ -14,6 +14,7 @@ namespace Adapter.Adapter
         }
 
         public string Name => _target.GetName();
+
         public void Main()
         {
             _target.Execute();

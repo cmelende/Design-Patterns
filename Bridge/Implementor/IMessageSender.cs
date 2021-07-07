@@ -1,4 +1,4 @@
-﻿namespace Bridge.Implementor
+﻿namespace BridgePattern.Implementor
 {
     public interface IMessageSender
     {

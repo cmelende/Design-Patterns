@@ -1,16 +1,16 @@
 ﻿using System;
 using DesignPatternBase;
-using Mediator.Colleagues;
-using Mediator.ConcreteMediator;
+using MediatorPattern.Colleagues;
+using MediatorPattern.ConcreteMediator;
 
-namespace Mediator
+namespace MediatorPattern
 {
     public class MediatorExampleClient : IDesignPatternClient
     {
         public string Name => "Mediator Example";
+
         public void Main()
         {
-
             var chatRoom = new ChatRoom();
 
             Participant george = new Beatle("George");

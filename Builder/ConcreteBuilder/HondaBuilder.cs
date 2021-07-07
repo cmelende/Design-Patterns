@@ -1,41 +1,42 @@
-﻿using Builder.Builder;
-using Builder.Product;
+﻿using BuilderPattern.Builder;
+using BuilderPattern.Product;
 
-namespace Builder
+namespace BuilderPattern.ConcreteBuilder
 {
     public class HondaBuilder : IVehicleBuilder
     {
-        Vehicle objVehicle = new Vehicle();
+        private readonly Vehicle _objVehicle = new Vehicle();
+
         public void SetModel()
         {
-            objVehicle.Model = "Honda";
+            _objVehicle.Model = "Honda";
         }
 
         public void SetEngine()
         {
-            objVehicle.Engine = "4 Stroke";
+            _objVehicle.Engine = "4 Stroke";
         }
 
         public void SetTransmission()
         {
-            objVehicle.Transmission = "125 Km/hr";
+            _objVehicle.Transmission = "125 Km/hr";
         }
 
         public void SetBody()
         {
-            objVehicle.Body = "Plastic";
+            _objVehicle.Body = "Plastic";
         }
 
         public void SetAccessories()
         {
-            objVehicle.Accessories.Add("Seat Cover");
-            objVehicle.Accessories.Add("Rear Mirror");
-            objVehicle.Accessories.Add("Helmet");
+            _objVehicle.Accessories.Add("Seat Cover");
+            _objVehicle.Accessories.Add("Rear Mirror");
+            _objVehicle.Accessories.Add("Helmet");
         }
 
         public Vehicle GetVehicle()
         {
-            return objVehicle;
+            return _objVehicle;
         }
     }
 }

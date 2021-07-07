@@ -4,30 +4,30 @@ using System.Linq;
 using AbstractFactory;
 using Adapter.Adaptees;
 using Adapter.Adapter;
-using Bridge;
-using Builder;
+using BridgePattern;
+using BuilderPattern;
 using ChainOfResponsibility;
-using Command;
+using CommandPattern;
 using CompositePattern.ComponentWithChildManagement;
 using CompositePattern.ComponentWithoutChildManagement;
-using Decorator.CarExample;
-using Decorator.MarineArenaExample;
+using DecoratorPattern.CarExample;
+using DecoratorPattern.MarineArenaExample;
 using DesignPatternBase;
-using Facade.Examples;
-using FactoryMethod;
-using Flyweight;
-using Interpreter.DateInterpreter;
-using Interpreter.TruthyExample;
+using FacadePattern.Examples;
+using FactoryMethodPattern;
+using FlyweightPattern;
+using InterpreterPattern.DateInterpreter;
+using InterpreterPattern.TruthyExample;
 using IteratorPattern;
-using Mediator;
+using MediatorPattern;
 using MementoPattern;
 using ObserverPattern;
-using Prototype;
-using Proxy.CastleProxy.ClassProxy;
-using Proxy.CastleProxy.WithoutTarget;
-using Proxy.CastleProxy.WithTarget;
-using Proxy.SimpleProxy;
-using Singleton;
+using PrototypePattern;
+using ProxyPattern.CastleProxy.ClassProxy;
+using ProxyPattern.CastleProxy.WithoutTarget;
+using ProxyPattern.CastleProxy.WithTarget;
+using ProxyPattern.SimpleProxy;
+using SingletonPattern;
 using StatePattern;
 using Strategy.SimpleValidationStrategyEx;
 using Strategy.ValidationStrategyEx;
@@ -60,20 +60,20 @@ namespace App
                 {"castle proxy with target", () => new CastleProxyInterfaceWithTargetClient()},
                 {"facade example", () => new FacadeExample()},
                 {"dependency injection facade example", () => new DiFacadeExample()},
-                {"flyweight", ()=> new FlyweightShapeClient() },
-                {"chain of responsibility", () => new ChainOfResponsibilityClient() },
-                {"command", ()=>new CommandClient() },
-                {"date interpreter example", ()=> new DateInterpreterExample() },
-                {"interpreter example", ()=> new TruthyInterpreterExample() },
-                {"iterator example", ()=> new IteratorDesignPattern() },
-                {"mediator example", () => new MediatorExampleClient() },
-                {"memento adventure", ()=>new MementoAdventureExample() },
-                {"observer example", ()=>new ObserverClient() },
-                {"state example", ()=>new StatePatternClient() },
-                {"simple stratege", ()=>new SimpleStrategyClient() },
-                {"validation strategy", ()=>new ValidationStrategyClient() },
+                {"flyweight", () => new FlyweightShapeClient()},
+                {"chain of responsibility", () => new ChainOfResponsibilityClient()},
+                {"command", () => new CommandClient()},
+                {"date interpreter example", () => new DateInterpreterExample()},
+                {"interpreter example", () => new TruthyInterpreterExample()},
+                {"iterator example", () => new IteratorDesignPattern()},
+                {"mediator example", () => new MediatorExampleClient()},
+                {"memento adventure", () => new MementoAdventureExample()},
+                {"observer example", () => new ObserverClient()},
+                {"state example", () => new StatePatternClient()},
+                {"simple stratege", () => new SimpleStrategyClient()},
+                {"validation strategy", () => new ValidationStrategyClient()},
                 {"template method example", () => new TemplateMethodExample()},
-                {"visitor example", ()=>new VisitorExample()}
+                {"visitor example", () => new VisitorExample()}
             };
 
         public static void Run(string patternName)

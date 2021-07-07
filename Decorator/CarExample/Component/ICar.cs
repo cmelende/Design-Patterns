@@ -1,8 +1,8 @@
-﻿namespace Decorator.CarExample.Component
+﻿namespace DecoratorPattern.CarExample.Component
 {
-    /// <summary>   
-    /// Car Base component   
-    /// </summary>   
+    /// <summary>
+    ///     Car Base component
+    /// </summary>
     public interface ICar
     {
         string GetDescription();

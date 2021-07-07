@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Mediator.Colleagues;
-using Mediator.Mediator;
+using MediatorPattern.Colleagues;
+using MediatorPattern.Mediator;
 
-namespace Mediator.ConcreteMediator
+namespace MediatorPattern.ConcreteMediator
 {
     public class ChatRoom : IChatRoom
     {
@@ -11,10 +11,7 @@ namespace Mediator.ConcreteMediator
 
         public void Register(Participant participant)
         {
-            if (!_participants.ContainsValue(participant))
-            {
-                _participants[participant.Name] = participant;
-            }
+            if (!_participants.ContainsValue(participant)) _participants[participant.Name] = participant;
 
             participant.ChatRoom = this;
         }

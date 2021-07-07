@@ -1,10 +1,13 @@
 ﻿using Decorator.MarineArenaExample.Component;
+using DecoratorPattern.MarineArenaExample.Decorator;
 
-namespace Decorator.MarineArenaExample.ConcreteDecorator
+namespace DecoratorPattern.MarineArenaExample.ConcreteDecorator
 {
     public class AdvancedLoadout : MarineDecorator
     {
-        public AdvancedLoadout(IMarine marine) : base(marine) { }
+        public AdvancedLoadout(IMarine marine) : base(marine)
+        {
+        }
 
         public override int GetDamage()
         {

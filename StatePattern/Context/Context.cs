@@ -4,7 +4,7 @@ namespace StatePattern.Context
 {
     public class Context
     {
-        private ConnectionState _state = null;
+        private ConnectionState _state;
 
         public Context(ConnectionState state)
         {

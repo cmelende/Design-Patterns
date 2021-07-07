@@ -1,6 +1,6 @@
 ﻿using Decorator.MarineArenaExample.Component;
 
-namespace Decorator.MarineArenaExample.ConcreteComponent
+namespace DecoratorPattern.MarineArenaExample.ConcreteComponent
 {
     public class Grunt : IMarine
     {
@@ -11,7 +11,7 @@ namespace Decorator.MarineArenaExample.ConcreteComponent
 
         public int GetArmor()
         {
-            return 10; 
+            return 10;
         }
     }
 }

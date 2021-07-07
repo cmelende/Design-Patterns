@@ -1,13 +1,14 @@
 ﻿using System;
 using DesignPatternBase;
-using Prototype.ConcretePrototype;
-using Prototype.PrototypeManager;
+using PrototypePattern.ConcretePrototype;
+using PrototypePattern.PrototypeManager;
 
-namespace Prototype
+namespace PrototypePattern
 {
     public class PrototypeClient : IDesignPatternClient
     {
         public string Name => "Prototype";
+
         public void Main()
         {
             // Initialize with standard colors
@@ -21,14 +22,14 @@ namespace Prototype
             // Ask user for new color 
             Console.WriteLine("Please enter the color you want to create");
 
-            Console.Write("R:");
-            var inputRed = int.Parse(Console.ReadLine());
+            Console.Write("Red code:");
+            int inputRed = int.Parse(Console.ReadLine());
 
-            Console.Write("G:");
-            var inputGreen = int.Parse(Console.ReadLine());
+            Console.Write("Green code:");
+            int inputGreen = int.Parse(Console.ReadLine());
 
-            Console.Write("B:");
-            var inputBlue = int.Parse(Console.ReadLine());
+            Console.Write("Blue code:");
+            int inputBlue = int.Parse(Console.ReadLine());
 
             Console.Write("Name:");
             string name = Console.ReadLine();

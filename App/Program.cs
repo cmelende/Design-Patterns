@@ -6,11 +6,11 @@ namespace App
     {
         private const string ExitKey = "/q";
 
-        static void Main(string [] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("----------Design Patterns ----------\n");
             var quitProgram = false;
-            while(!quitProgram) 
+            while (!quitProgram)
             {
                 Patterns.ShowCatalog();
 
@@ -20,7 +20,7 @@ namespace App
                 quitProgram = input == ExitKey;
 
                 if (!quitProgram) Run(input);
-            } 
+            }
         }
 
         private static void Run(string input)

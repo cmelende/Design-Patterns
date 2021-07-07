@@ -1,4 +1,4 @@
-﻿namespace Facade.Subsystems.Interface
+﻿namespace FacadePattern.Subsystems.Interface
 {
     public interface IBankSubsystem
     {

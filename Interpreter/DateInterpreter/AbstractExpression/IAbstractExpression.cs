@@ -1,4 +1,4 @@
-﻿namespace Interpreter.DateInterpreter.AbstractExpression
+﻿namespace InterpreterPattern.DateInterpreter.AbstractExpression
 {
     public interface IAbstractExpression
     {

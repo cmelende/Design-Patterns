@@ -9,6 +9,5 @@ namespace ObserverPattern.Subject
         void Detach(IObserver investor);
 
         void Notify();
-
     }
 }

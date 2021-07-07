@@ -1,12 +1,13 @@
 ﻿using System;
 using DesignPatternBase;
-using Proxy.SimpleProxy.Proxy;
+using ProxyPattern.SimpleProxy.Proxy;
 
-namespace Proxy.SimpleProxy
+namespace ProxyPattern.SimpleProxy
 {
     public class MathProxyClient : IDesignPatternClient
     {
         public string Name => "Math Proxy Example";
+
         public void Main()
         {
             var proxy = new MathProxy();

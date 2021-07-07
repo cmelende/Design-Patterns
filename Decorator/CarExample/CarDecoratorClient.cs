@@ -1,15 +1,16 @@
 ﻿using System;
-using Decorator.CarExample.Component;
-using Decorator.CarExample.ConcreteComponent;
-using Decorator.CarExample.ConcreteDecorator;
-using Decorator.CarExample.Decorator;
+using DecoratorPattern.CarExample.Component;
+using DecoratorPattern.CarExample.ConcreteComponent;
+using DecoratorPattern.CarExample.ConcreteDecorator;
+using DecoratorPattern.CarExample.Decorator;
 using DesignPatternBase;
 
-namespace Decorator.CarExample
+namespace DecoratorPattern.CarExample
 {
     public class DecoratorClient : IDesignPatternClient
     {
         public string Name => "Decorator Example";
+
         public void Main()
         {
             //Create EconomyCar instance.   

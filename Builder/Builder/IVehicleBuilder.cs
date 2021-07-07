@@ -1,6 +1,6 @@
-﻿using Builder.Product;
+﻿using BuilderPattern.Product;
 
-namespace Builder.Builder
+namespace BuilderPattern.Builder
 {
     public interface IVehicleBuilder
     {

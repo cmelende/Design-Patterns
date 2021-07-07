@@ -1,4 +1,4 @@
-﻿namespace Proxy.SimpleProxy.Subject
+﻿namespace ProxyPattern.SimpleProxy.Subject
 {
     public interface IMath
     {

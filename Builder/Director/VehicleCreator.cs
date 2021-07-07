@@ -1,7 +1,7 @@
-﻿using Builder.Builder;
-using Builder.Product;
+﻿using BuilderPattern.Builder;
+using BuilderPattern.Product;
 
-namespace Builder.Director
+namespace BuilderPattern.Director
 {
     public class VehicleCreator
     {

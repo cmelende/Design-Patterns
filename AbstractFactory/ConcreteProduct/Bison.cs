@@ -1,5 +1,5 @@
 ﻿using System;
-using AbstractFactory.AbstractProduct;
+using AbstractFactoryPattern.AbstractProduct;
 
 namespace AbstractFactory.ConcreteProduct
 {

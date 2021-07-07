@@ -2,13 +2,13 @@
 using Strategy.ValidationStrategyEx.ConcreteStrategy;
 using Strategy.ValidationStrategyEx.Context;
 using Strategy.ValidationStrategyEx.Models;
-using Strategy.ValidationStrategyEx.Strategy;
 
 namespace Strategy.ValidationStrategyEx
 {
     public class ValidationStrategyClient : IDesignPatternClient
     {
         public string Name => "Validation Strategy Example";
+
         public void Main()
         {
             var entityToSave = new Entity();

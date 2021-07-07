@@ -3,7 +3,7 @@ using Strategy.ValidationStrategyEx.Models;
 
 namespace Strategy.ValidationStrategyEx.ConcreteStrategy
 {
-    public class CommonValidation 
+    public class CommonValidation
     {
         public Validation SomeCommonValidation(object obj, Validation verification)
         {

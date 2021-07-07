@@ -1,4 +1,4 @@
-﻿namespace FactoryMethod.Product
+﻿namespace FactoryMethodPattern.Product
 {
     public interface IPerson
     {

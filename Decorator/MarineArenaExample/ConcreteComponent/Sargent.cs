@@ -1,6 +1,6 @@
 ﻿using Decorator.MarineArenaExample.Component;
 
-namespace Decorator.MarineArenaExample.ConcreteComponent
+namespace DecoratorPattern.MarineArenaExample.ConcreteComponent
 {
     public class Sargent : IMarine
     {

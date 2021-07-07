@@ -1,16 +1,17 @@
 ﻿using System;
 using DesignPatternBase;
-using Flyweight.Flyweight;
-using Flyweight.FlyweightFactory;
+using FlyweightPattern.Flyweight;
+using FlyweightPattern.FlyweightFactory;
 
-namespace Flyweight
+namespace FlyweightPattern
 {
     public class FlyweightShapeClient : IDesignPatternClient
     {
         public string Name => "Shape Flyweight Example";
+
         public void Main()
         {
-            ShapeObjectFactory sof = ShapeObjectFactory.Instance;
+            var sof = ShapeObjectFactory.Instance;
 
             IShape shape = sof.GetShape("Rectangle");
             shape.Print(ConsoleColor.White);

@@ -1,6 +1,6 @@
-﻿using Bridge.Implementor;
+﻿using BridgePattern.Implementor;
 
-namespace Bridge.Abstraction
+namespace BridgePattern.Abstraction
 {
     public abstract class Message
     {

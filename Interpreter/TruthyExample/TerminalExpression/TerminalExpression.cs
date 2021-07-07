@@ -1,6 +1,6 @@
-﻿using Interpreter.TruthyExample.AbstractExpression;
+﻿using InterpreterPattern.TruthyExample.AbstractExpression;
 
-namespace Interpreter.TruthyExample.TerminalExpression
+namespace InterpreterPattern.TruthyExample.TerminalExpression
 {
     public class TerminalExpression : IExpression
     {

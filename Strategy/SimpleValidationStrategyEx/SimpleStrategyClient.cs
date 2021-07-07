@@ -23,5 +23,4 @@ namespace Strategy.SimpleValidationStrategyEx
             context.DoSomeBusinessLogic();
         }
     }
-
 }

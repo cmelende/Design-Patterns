@@ -1,15 +1,15 @@
 ﻿using AbstractFactory.AbstractFactory;
 using AbstractFactory.AbstractProduct;
+using AbstractFactoryPattern.AbstractProduct;
 
-namespace AbstractFactory.Client
+namespace AbstractFactoryPattern.Client
 {
     public class AnimalWorld
 
     {
-        private readonly IHerbivore _herbivore;
         private readonly ICarnivore _carnivore;
+        private readonly IHerbivore _herbivore;
 
-        // Constructor
         public AnimalWorld(IContinentFactory factory)
         {
             _carnivore = factory.CreateCarnivore();

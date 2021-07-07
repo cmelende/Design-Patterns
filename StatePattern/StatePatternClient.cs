@@ -3,7 +3,6 @@ using StatePattern.ConcreteState;
 
 namespace StatePattern
 {
-
     public class StatePatternClient : IDesignPatternClient
     {
         public string Name => "state example";

@@ -1,14 +1,16 @@
-﻿using Decorator.CarExample.Component;
-using Decorator.CarExample.Decorator;
+﻿using DecoratorPattern.CarExample.Component;
+using DecoratorPattern.CarExample.Decorator;
 
-namespace Decorator.CarExample.ConcreteDecorator
+namespace DecoratorPattern.CarExample.ConcreteDecorator
 {
-    /// <summary>   
-    /// Concrete Decorator   
-    /// </summary>   
+    /// <summary>
+    ///     Concrete Decorator
+    /// </summary>
     public class AdvancedAccessories : CarAccessoriesDecorator
     {
-        public AdvancedAccessories(ICar aCar) : base(aCar) { }
+        public AdvancedAccessories(ICar aCar) : base(aCar)
+        {
+        }
 
         public override string GetDescription()
         {

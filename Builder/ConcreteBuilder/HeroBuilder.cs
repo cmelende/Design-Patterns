@@ -1,40 +1,41 @@
-﻿using Builder.Builder;
-using Builder.Product;
+﻿using BuilderPattern.Builder;
+using BuilderPattern.Product;
 
-namespace Builder
+namespace BuilderPattern.ConcreteBuilder
 {
     public class HeroBuilder : IVehicleBuilder
     {
-        Vehicle objVehicle = new Vehicle();
+        private readonly Vehicle _objVehicle = new Vehicle();
+
         public void SetModel()
         {
-            objVehicle.Model = "Hero";
+            _objVehicle.Model = "Hero";
         }
 
         public void SetEngine()
         {
-            objVehicle.Engine = "4 Stroke";
+            _objVehicle.Engine = "4 Stroke";
         }
 
         public void SetTransmission()
         {
-            objVehicle.Transmission = "120 km/hr";
+            _objVehicle.Transmission = "120 km/hr";
         }
 
         public void SetBody()
         {
-            objVehicle.Body = "Plastic";
+            _objVehicle.Body = "Plastic";
         }
 
         public void SetAccessories()
         {
-            objVehicle.Accessories.Add("Seat Cover");
-            objVehicle.Accessories.Add("Rear Mirror");
+            _objVehicle.Accessories.Add("Seat Cover");
+            _objVehicle.Accessories.Add("Rear Mirror");
         }
 
         public Vehicle GetVehicle()
         {
-            return objVehicle;
+            return _objVehicle;
         }
     }
 }

@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Builder.Product
+namespace BuilderPattern.Product
 {
     public class Vehicle
     {
+        public Vehicle()
+        {
+            Accessories = new List<string>();
+        }
+
         public string Model { get; set; }
         public string Engine { get; set; }
         public string Transmission { get; set; }
         public string Body { get; set; }
         public List<string> Accessories { get; set; }
-
-        public Vehicle()
-        {
-            Accessories = new List<string>();
-        }
 
         public void ShowInfo()
         {
@@ -23,10 +23,7 @@ namespace Builder.Product
             Console.WriteLine("Body: {0}", Body);
             Console.WriteLine("Transmission: {0}", Transmission);
             Console.WriteLine("Accessories:");
-            foreach (var accessory in Accessories)
-            {
-                Console.WriteLine("\t{0}", accessory);
-            }
+            foreach (string accessory in Accessories) Console.WriteLine("\t{0}", accessory);
         }
     }
 }

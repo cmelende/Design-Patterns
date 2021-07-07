@@ -1,8 +1,8 @@
 ﻿using System;
 using DesignPatternBase;
-using Facade.Facade;
+using FacadePattern.Facade;
 
-namespace Facade.Examples
+namespace FacadePattern.Examples
 {
     public class FacadeExample : IDesignPatternClient
     {
@@ -13,10 +13,9 @@ namespace Facade.Examples
             var mortgage = new MortgageFacade();
 
             var customer = new Customer("Ann McKinsey");
-            var eligible = mortgage.IsEligible(customer, 125000);
+            bool eligible = mortgage.IsEligible(customer, 125000);
 
             Console.WriteLine($"\n{customer.Name} has been {(eligible ? "Approved" : "Rejected")}");
-
         }
     }
 }

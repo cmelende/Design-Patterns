@@ -1,14 +1,15 @@
-﻿using Command.ConcreteCommand;
+﻿using System;
+using Command.ConcreteCommand;
 using Command.Invoker;
 using Command.Receiver;
 using DesignPatternBase;
-using System;
 
-namespace Command
+namespace CommandPattern
 {
     public class CommandClient : IDesignPatternClient
     {
         public string Name => "Command Example";
+
         public void Main()
         {
             //Invoker
@@ -30,9 +31,9 @@ namespace Command
 
             //Adding to queue to be executed, first in first out
             transactionQueue.AddTransaction(suesDeposit);
-            transactionQueue.AddTransaction(corysDeposit);      
+            transactionQueue.AddTransaction(corysDeposit);
             transactionQueue.AddTransaction(suesWithdrawal);
-            transactionQueue.AddTransaction(corysWithdrawal);   
+            transactionQueue.AddTransaction(corysWithdrawal);
 
             transactionQueue.ProcessPendingTransactions();
 

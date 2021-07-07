@@ -1,10 +1,13 @@
 ﻿using Decorator.MarineArenaExample.Component;
+using DecoratorPattern.MarineArenaExample.Decorator;
 
-namespace Decorator.MarineArenaExample.ConcreteDecorator
+namespace DecoratorPattern.MarineArenaExample.ConcreteDecorator
 {
     public class EliteArmor : MarineDecorator
     {
-        public EliteArmor(IMarine marine) : base(marine) { }
+        public EliteArmor(IMarine marine) : base(marine)
+        {
+        }
 
         public override int GetArmor()
         {

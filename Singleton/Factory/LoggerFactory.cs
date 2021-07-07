@@ -1,11 +1,10 @@
-﻿using Singleton.Implementation;
-using Singleton.Interface;
+﻿using SingletonPattern.Implementation;
+using SingletonPattern.Interface;
 
-namespace Singleton.Factory
+namespace SingletonPattern.Factory
 {
     public class LoggerFactory
     {
-        private static readonly LoggerFactory instance = new LoggerFactory();
         static LoggerFactory()
         {
         }
@@ -14,7 +13,7 @@ namespace Singleton.Factory
         {
         }
 
-        public static LoggerFactory Instance => instance;
+        public static LoggerFactory Instance { get; } = new LoggerFactory();
 
         public ILogger GetLogger()
         {

@@ -5,7 +5,7 @@
         protected abstract void DoMixIngredients();
         protected abstract void DoBake();
         protected abstract void DoSlice();
-        
+
         public void Make()
         {
             DoMixIngredients();

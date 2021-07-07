@@ -1,13 +1,13 @@
 ﻿using System;
-using Prototype.Prototype;
+using PrototypePattern.Prototype;
 
-namespace Prototype.ConcretePrototype
+namespace PrototypePattern.ConcretePrototype
 {
-    class Color : IColorPrototype
+    internal class Color : IColorPrototype
     {
-        private readonly int _red;
-        private readonly int _green;
         private readonly int _blue;
+        private readonly int _green;
+        private readonly int _red;
 
         public Color(int red, int green, int blue)
         {

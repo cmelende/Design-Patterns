@@ -1,8 +1,9 @@
 ﻿using AbstractFactory.AbstractFactory;
 using AbstractFactory.AbstractProduct;
 using AbstractFactory.ConcreteProduct;
+using AbstractFactoryPattern.AbstractProduct;
 
-namespace AbstractFactory.ConcreteFactory
+namespace AbstractFactoryPattern.ConcreteFactory
 {
     public class AfricaFactory : IContinentFactory
     {
@@ -10,6 +11,7 @@ namespace AbstractFactory.ConcreteFactory
         {
             return new Wildebeest();
         }
+
         public ICarnivore CreateCarnivore()
         {
             return new Lion();

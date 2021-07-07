@@ -1,4 +1,4 @@
-﻿namespace Proxy.CastleProxy
+﻿namespace ProxyPattern.CastleProxy
 {
     public class Person : IPerson
     {

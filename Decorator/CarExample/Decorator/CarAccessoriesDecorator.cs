@@ -1,10 +1,10 @@
-﻿using Decorator.CarExample.Component;
+﻿using DecoratorPattern.CarExample.Component;
 
-namespace Decorator.CarExample.Decorator
+namespace DecoratorPattern.CarExample.Decorator
 {
-    /// <summary>   
-    /// Abstract Decorator   
-    /// </summary>   
+    /// <summary>
+    ///     Abstract Decorator
+    /// </summary>
     public abstract class CarAccessoriesDecorator : ICar
     {
         private readonly ICar _car;
@@ -13,6 +13,7 @@ namespace Decorator.CarExample.Decorator
         {
             _car = aCar;
         }
+
         public virtual string GetDescription()
         {
             return _car.GetDescription();

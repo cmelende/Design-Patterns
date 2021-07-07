@@ -1,11 +1,11 @@
 ﻿using System;
-using FactoryMethod.ConcreteProduct;
-using FactoryMethod.Product;
+using FactoryMethodPattern.ConcreteProduct;
+using FactoryMethodPattern.Product;
 
-namespace FactoryMethod.Factory
+namespace FactoryMethodPattern.Factory
 {
     /// <summary>
-    /// Implementation of PersonFactory - Used to create objects
+    ///     Implementation of PersonFactory - Used to create objects
     /// </summary>
     public class PersonFactory
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Flyweight.Flyweight
+namespace FlyweightPattern.Flyweight
 {
     public interface IShape
     {

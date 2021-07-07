@@ -1,4 +1,4 @@
-﻿namespace Interpreter.TruthyExample.AbstractExpression
+﻿namespace InterpreterPattern.TruthyExample.AbstractExpression
 {
     public interface IExpression
     {

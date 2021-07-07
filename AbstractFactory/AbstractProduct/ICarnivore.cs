@@ -1,4 +1,6 @@
-﻿namespace AbstractFactory.AbstractProduct
+﻿using AbstractFactoryPattern.AbstractProduct;
+
+namespace AbstractFactory.AbstractProduct
 {
     public interface ICarnivore
     {

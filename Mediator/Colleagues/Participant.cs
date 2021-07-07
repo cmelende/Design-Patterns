@@ -1,7 +1,7 @@
 ﻿using System;
-using Mediator.ConcreteMediator;
+using MediatorPattern.ConcreteMediator;
 
-namespace Mediator.Colleagues
+namespace MediatorPattern.Colleagues
 {
     public class Participant
     {
@@ -21,7 +21,7 @@ namespace Mediator.Colleagues
 
         public virtual void Receive(string from, string message)
         {
-            Console.WriteLine($"{@from} to {Name}: '{message}'");
+            Console.WriteLine($"{from} to {Name}: '{message}'");
         }
     }
 }

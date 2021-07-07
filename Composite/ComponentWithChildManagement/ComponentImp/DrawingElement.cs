@@ -6,6 +6,7 @@ namespace CompositePattern.ComponentWithChildManagement.ComponentImp
 
     {
         protected string Name;
+
         public DrawingElement(string name)
         {
             Name = name;
@@ -19,6 +20,5 @@ namespace CompositePattern.ComponentWithChildManagement.ComponentImp
         {
             return null;
         }
-
     }
 }

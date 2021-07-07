@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Prototype.Prototype;
+using PrototypePattern.Prototype;
 
-namespace Prototype.PrototypeManager
+namespace PrototypePattern.PrototypeManager
 {
-    class ColorManager
+    internal class ColorManager
     {
         private readonly Dictionary<string, IColorPrototype> _colors =
             new Dictionary<string, IColorPrototype>();

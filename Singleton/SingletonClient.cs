@@ -1,14 +1,16 @@
 ﻿using DesignPatternBase;
-using Singleton.Factory;
+using SingletonPattern.Factory;
+using SingletonPattern.Interface;
 
-namespace Singleton
+namespace SingletonPattern
 {
     public class SingletonClient : IDesignPatternClient
     {
         public string Name => "Singleton";
+
         public void Main()
         {
-            var logger = LoggerFactory.Instance.GetLogger();
+            ILogger logger = LoggerFactory.Instance.GetLogger();
             logger.Log("this is the singleton logger");
         }
     }

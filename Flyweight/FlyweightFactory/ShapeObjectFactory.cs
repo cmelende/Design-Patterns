@@ -1,28 +1,27 @@
 ﻿using System.Collections.Generic;
-using Flyweight.ConcreteFlyweight;
-using Flyweight.Flyweight;
+using FlyweightPattern.ConcreteFlyweight;
+using FlyweightPattern.Flyweight;
 
-namespace Flyweight.FlyweightFactory
+namespace FlyweightPattern.FlyweightFactory
 {
     /// <summary>
     ///     The 'FlyweightFactory' class
     /// </summary>
     public class ShapeObjectFactory
     {
+        public static ShapeObjectFactory Instance = new ShapeObjectFactory();
+
+        public readonly Dictionary<string, IShape> Shapes;
+
         private ShapeObjectFactory()
         {
             //Note: this can happen on startup, or initializing some canvas for drawing shapes
             Shapes = new Dictionary<string, IShape>
             {
                 {"Rectangle", new Rectangle()},
-                { "Circle", new Circle()}
+                {"Circle", new Circle()}
             };
-
         }
-
-        public static ShapeObjectFactory Instance = new ShapeObjectFactory();
-
-        public readonly Dictionary<string, IShape> Shapes; 
 
         public int TotalObjectsCreated => Shapes.Count;
 
@@ -30,7 +29,7 @@ namespace Flyweight.FlyweightFactory
         {
             if (Shapes.ContainsKey(shapeName))
                 return Shapes[shapeName];
-            
+
             throw new KeyNotFoundException("Invalid shape key");
         }
     }

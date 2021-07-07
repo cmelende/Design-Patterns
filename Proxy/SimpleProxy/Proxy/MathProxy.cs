@@ -1,7 +1,7 @@
-﻿using Proxy.SimpleProxy.RealSubject;
-using Proxy.SimpleProxy.Subject;
+﻿using ProxyPattern.SimpleProxy.RealSubject;
+using ProxyPattern.SimpleProxy.Subject;
 
-namespace Proxy.SimpleProxy.Proxy
+namespace ProxyPattern.SimpleProxy.Proxy
 {
     public class MathProxy : IMath
 
@@ -12,14 +12,17 @@ namespace Proxy.SimpleProxy.Proxy
         {
             return _math.Add(x, y);
         }
+
         public double Sub(double x, double y)
         {
             return _math.Sub(x, y);
         }
+
         public double Mul(double x, double y)
         {
             return _math.Mul(x, y);
         }
+
         public double Div(double x, double y)
         {
             return _math.Div(x, y);

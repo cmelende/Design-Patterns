@@ -1,6 +1,6 @@
-﻿using Mediator.Colleagues;
+﻿using MediatorPattern.Colleagues;
 
-namespace Mediator.Mediator
+namespace MediatorPattern.Mediator
 {
     public interface IChatRoom
     {

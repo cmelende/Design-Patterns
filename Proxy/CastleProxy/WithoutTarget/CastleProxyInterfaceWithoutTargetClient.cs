@@ -1,11 +1,13 @@
 ﻿using Castle.DynamicProxy;
 using DesignPatternBase;
+using Proxy.CastleProxy;
 
-namespace Proxy.CastleProxy.WithoutTarget
+namespace ProxyPattern.CastleProxy.WithoutTarget
 {
     public class CastleProxyInterfaceWithoutTargetClient : IDesignPatternClient
     {
         public string Name => "Castle Proxy Interface Without Target Example";
+
         public void Main()
         {
             var proxy = new ProxyGenerator()

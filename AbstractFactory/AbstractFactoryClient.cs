@@ -1,6 +1,6 @@
 ﻿using AbstractFactory.AbstractFactory;
-using AbstractFactory.Client;
-using AbstractFactory.ConcreteFactory;
+using AbstractFactoryPattern.Client;
+using AbstractFactoryPattern.ConcreteFactory;
 using DesignPatternBase;
 
 namespace AbstractFactory
@@ -13,7 +13,7 @@ namespace AbstractFactory
         {
             // Create and run the African animal world
             IContinentFactory africa = new AfricaFactory();
-            AnimalWorld world = new AnimalWorld(africa);
+            var world = new AnimalWorld(africa);
             world.RunFoodChain();
 
             // Create and run the American animal world

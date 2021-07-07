@@ -1,10 +1,12 @@
 ﻿using System;
 
-namespace Mediator.Colleagues
+namespace MediatorPattern.Colleagues
 {
     public class NonBeatle : Participant
     {
-        public NonBeatle(string name) : base(name) { }
+        public NonBeatle(string name) : base(name)
+        {
+        }
 
         public override void Receive(string from, string message)
         {

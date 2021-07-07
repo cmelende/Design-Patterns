@@ -6,7 +6,9 @@ namespace CompositePattern.ComponentWithChildManagement.LeafImp
     public class PrimitiveElement : DrawingElement
 
     {
-        public PrimitiveElement(string name) : base(name) { }
+        public PrimitiveElement(string name) : base(name)
+        {
+        }
 
         public override void Add(DrawingElement c)
         {

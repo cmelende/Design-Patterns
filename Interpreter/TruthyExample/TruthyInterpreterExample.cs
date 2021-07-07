@@ -1,13 +1,14 @@
 ﻿using System;
 using DesignPatternBase;
-using Interpreter.TruthyExample.AbstractExpression;
-using Interpreter.TruthyExample.NonterminalExpression;
+using InterpreterPattern.TruthyExample.AbstractExpression;
+using InterpreterPattern.TruthyExample.NonterminalExpression;
 
-namespace Interpreter.TruthyExample
+namespace InterpreterPattern.TruthyExample
 {
     public class TruthyInterpreterExample : IDesignPatternClient
     {
         public string Name => "Truthy interpreter example";
+
         public void Main()
         {
             IExpression person1 = new TerminalExpression.TerminalExpression("Kushagra");

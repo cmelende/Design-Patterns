@@ -7,7 +7,19 @@ namespace ObserverPattern.ConcreteSubject
     public class IBM : ISubject
 
     {
-        private IList<IObserver> _observers = new List<IObserver>();
+        private readonly IList<IObserver> _observers = new List<IObserver>();
+
+        private decimal _price;
+
+        public decimal Price
+        {
+            get => _price;
+            set
+            {
+                _price = value;
+                Notify();
+            }
+        }
 
         public void Attach(IObserver observer)
         {
@@ -21,24 +33,7 @@ namespace ObserverPattern.ConcreteSubject
 
         public void Notify()
         {
-            foreach(IObserver observer in _observers)
-            {
-                observer.Update(this, new StockInfo("IBM", Price));
-            }
-        }
-
-        private decimal _price;
-        public decimal Price 
-        { 
-            get
-            {
-                return _price;
-            } 
-            set
-            {
-                _price = value;
-                Notify();
-            }
+            foreach (IObserver observer in _observers) observer.Update(this, new StockInfo("IBM", Price));
         }
     }
 }

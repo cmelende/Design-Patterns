@@ -1,7 +1,7 @@
 ﻿using System;
 using Decorator.MarineArenaExample.Component;
 
-namespace Decorator
+namespace DecoratorPattern.MarineArenaExample.Decorator
 {
     public abstract class MarineDecorator : IMarine
     {
@@ -24,20 +24,14 @@ namespace Decorator
 
         public bool Attack(IMarine marine)
         {
-            if (GetDamage() > marine.GetArmor())
-            {
-                return true;
-            }
+            if (GetDamage() > marine.GetArmor()) return true;
 
             return false;
         }
 
         public bool Defend(IMarine marine)
         {
-            if (this.GetArmor() >= marine.GetDamage())
-            {
-                return true;
-            }
+            if (GetArmor() >= marine.GetDamage()) return true;
 
             return false;
         }

@@ -9,6 +9,7 @@ namespace CompositePattern.ComponentWithoutChildManagement
     public class CompositeNoChildManagementClient : IDesignPatternClient
     {
         public string Name => "Composite without Child Management";
+
         public void Main()
         {
             // Create a tree structure 
@@ -35,11 +36,9 @@ namespace CompositePattern.ComponentWithoutChildManagement
             var components = new List<IComponent> {root, compositeElement, primitive};
 
             //We lost some uniformity, so we have to type check
-            foreach (var component in components)
-            {
+            foreach (IComponent component in components)
                 if (component is IComposite)
                     (component as IComposite).Add(new Leaf());
-            }
 
             root.Write();
         }

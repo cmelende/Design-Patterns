@@ -1,6 +1,7 @@
 ﻿using AbstractFactory.AbstractFactory;
 using AbstractFactory.AbstractProduct;
 using AbstractFactory.ConcreteProduct;
+using AbstractFactoryPattern.AbstractProduct;
 
 namespace AbstractFactory
 {
@@ -11,6 +12,7 @@ namespace AbstractFactory
         {
             return new Bison();
         }
+
         public ICarnivore CreateCarnivore()
         {
             return new Wolf();

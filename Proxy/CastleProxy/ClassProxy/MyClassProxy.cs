@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Proxy.CastleProxy.ClassProxy
+namespace ProxyPattern.CastleProxy.ClassProxy
 {
     public class MyClassProxy
     {

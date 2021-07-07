@@ -10,7 +10,9 @@ namespace CompositePattern.ComponentWithChildManagement.CompositeImp
         private readonly List<DrawingElement> _elements = new List<DrawingElement>();
 
 
-        public CompositeElement(string name) : base(name) { }
+        public CompositeElement(string name) : base(name)
+        {
+        }
 
         public override void Add(DrawingElement d)
         {
